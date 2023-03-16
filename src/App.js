@@ -2,13 +2,11 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./Pages/general/Landing/landing";
 import Login from "./Pages/general/auth/login";
-import Header from "./Components/Static/header/header";
-import Footer from "./Components/Static/footer/footer";
+import EmployeeHome from "./Pages/employee/home/home";
 
 function App() {
   return (
     <BrowserRouter>
-      {/* <Header /> */}
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
@@ -30,10 +28,9 @@ function App() {
         </Route>
 
         <Route path="/employee">
-          <Route path="home" />
+          <Route path="home" element={<EmployeeHome />} />
         </Route>
       </Routes>
-      {/* <Footer /> */}
     </BrowserRouter>
   );
 }

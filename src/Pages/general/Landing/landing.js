@@ -22,9 +22,9 @@ export default function Landing() {
   }
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Landing />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
