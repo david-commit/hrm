@@ -1,3 +1,9 @@
+import Header from "../../Components/Static/header/header";
+
 export default function Landing() {
-  return <main>Landing page</main>;
+  return (
+    <>
+      <Header />
+    </>
+  );
 }
