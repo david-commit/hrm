@@ -83,10 +83,6 @@ button {
     font-weight: lighter;
   }
 
-  #header-login {
-    display: none;
-  }
-
   #menu-button {
     background-color: var(--tertiary-color);
     font-size: 1rem;
@@ -97,6 +93,9 @@ button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  #header-login {
+    display: none;
   }
 }
 
@@ -111,6 +110,7 @@ button {
 
   #header-login {
     width: 30%;
+    display: none;
   }
 
   #menu-button {
