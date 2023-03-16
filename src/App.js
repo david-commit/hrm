@@ -1,11 +1,12 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Landing from "./Pages/Landing/landing";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" />
+        <Route path="/" element={<Landing />} />
       </Routes>
     </BrowserRouter>
   );
