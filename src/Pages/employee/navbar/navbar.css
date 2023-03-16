@@ -1,0 +1,9 @@
+#employee-nav {
+  width: 20vw;
+  height: 100%;
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}

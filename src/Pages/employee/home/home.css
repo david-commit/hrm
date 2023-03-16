@@ -1,5 +1,9 @@
-#employee-home {
-  width: 70vh;
+#employee-cont {
+  width: 99.5vw;
   border: thin solid black;
-  height: 100vh;
+  height: 99.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
