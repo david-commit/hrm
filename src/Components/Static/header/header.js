@@ -15,6 +15,8 @@ export default function Header() {
           <Link to="/contact">Contact Us</Link>
         </span>
 
+        <button id="menu-button">Menu</button>
+
         <button id="header-login">Login</button>
       </nav>
     </header>
