@@ -17,14 +17,14 @@ export default function Header() {
   const openModal = () => setIsModalOpen(true);
   const closeModal = () => setIsModalOpen(false);
 
-  const modalContent = (
-    <div id="modal-window">
-      <Link to="/">Home</Link>
-      <Link to="/about">About Us</Link>
-      <Link to="/contact">Contact Us</Link>
-      <button onClick={closeModal}>Close Modal</button>
-    </div>
-  );
+//   const modalContent = (
+//     <div id="modal-window">
+//       <Link to="/">Home</Link>
+//       <Link to="/about">About Us</Link>
+//       <Link to="/contact">Contact Us</Link>
+//       <button onClick={closeModal}>Close Modal</button>
+//     </div>
+//   );
 
   return (
     <header id="header">
