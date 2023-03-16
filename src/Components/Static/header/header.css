@@ -68,5 +68,14 @@ a {
 
 /* Target all devices with a minimum width of 481 pixels and a maximum width of 768 pixels */
 @media (min-width: 481px) and (max-width: 768px) {
-  /* Your CSS styles for tablets go here */
+  #header > nav {
+    width: 95%;
+  }
+  #nav-cont {
+    display: none;
+  }
+
+  #header-login {
+    width: 30%;
+  }
 }
