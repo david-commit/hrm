@@ -12,7 +12,7 @@
 #header > nav {
   width: 80%;
   height: 100%;
-  border: thin solid white;
+  /* border: thin solid white; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -21,4 +21,14 @@
 
 nav > * {
   border: thin solid white;
+}
+
+#header-login {
+  width: 15%;
+  height: 80%;
+  border: 2px solid var(--primary-color);
+  background-color: var(--tertiary-color);
+  border-radius: 4px;
+  color: var(--primary-color);
+  font-size: 1rem;
 }
