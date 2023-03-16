@@ -6,7 +6,7 @@ export default function Header() {
     <header id="header">
       <nav>
         <Link id="nav-logo" to="/">
-          Logo
+          HRTech Int.
         </Link>
 
         <span id="nav-cont">

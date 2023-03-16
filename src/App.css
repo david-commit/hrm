@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 :root {
-  --primary-color: #f2f2f2;
+  /* --primary-color: #f2f2f2; */
+  --primary-color: #ffffff;
   --secondary-color: #f1f8ff;
   --tertiary-color: #030d94;
 }
