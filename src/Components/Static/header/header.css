@@ -97,6 +97,48 @@ button {
   #header-login {
     display: none;
   }
+
+  .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .modal-content {
+    border: 1px solid #cccccc;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-content > a {
+    width: 80%;
+    height: 5vh;
+    margin-top: 1vh;
+    background-color: var(--tertiary-color);
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--primary-color);
+    align-items: center;
+  }
+
+  .modal-content > button {
+    border: none;
+    background-color: transparent;
+    color: var(--tertiary-color);
+    font-size: 1rem;
+    margin-bottom: 1vh;
+  }
 }
 
 /* Target all devices with a minimum width of 481 pixels and a maximum width of 768 pixels */
@@ -123,5 +165,47 @@ button {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .modal-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .modal-content {
+    border: 1px solid #cccccc;
+    width: 100%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .modal-content > a {
+    width: 80%;
+    height: 5vh;
+    margin-top: 1vh;
+    background-color: var(--tertiary-color);
+    margin-bottom: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--primary-color);
+    align-items: center;
+  }
+
+  .modal-content > button {
+    border: none;
+    background-color: transparent;
+    color: var(--tertiary-color);
+    font-size: 1rem;
+    margin-bottom: 1vh;
   }
 }

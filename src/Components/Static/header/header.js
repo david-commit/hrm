@@ -18,11 +18,11 @@ export default function Header() {
   const closeModal = () => setIsModalOpen(false);
 
   const modalContent = (
-    <div >
-      <button onClick={closeModal}>Close Modal</button>
+    <div id="modal-window">
       <Link to="/">Home</Link>
       <Link to="/about">About Us</Link>
       <Link to="/contact">Contact Us</Link>
+      <button onClick={closeModal}>Close Modal</button>
     </div>
   );
 
@@ -47,9 +47,18 @@ export default function Header() {
           Login
         </button>
       </nav>
-
-      <Modal isOpen={isModalOpen} onRequestClose={closeModal}>
-        {modalContent}
+      <Modal
+        isOpen={isModalOpen}
+        onRequestClose={closeModal}
+        className="modal-container"
+        overlayClassName="modal-overlay"
+      >
+        <div className="modal-content">
+          <Link to="/">Home</Link>
+          <Link to="/about">About Us</Link>
+          <Link to="/contact">Contact Us</Link>
+          <button onClick={closeModal}>Close</button>
+        </div>
       </Modal>
     </header>
   );
