@@ -27,6 +27,7 @@ export default function Footer() {
           <p>+254717000001</p>
         </span>
       </div>
+      
       <span id="footer-foot">
         <p>&copy; 2023 HRTech Int. All rights reserved.</p>
         <p>Privacy policy</p>

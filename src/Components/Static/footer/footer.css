@@ -3,4 +3,29 @@
   height: 40vh;
   background-color: var(--tertiary-color);
   border: thin solid var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#footer > * {
+  width: 80%;
+  /* border: thin solid white; */
+}
+
+#footer-foot {
+  height: 20%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-top: thin solid var(--primary-color);
+}
+
+#footer-foot > * {
+  margin-left: 1vw;
+  margin-right: 1vw;
+  color: var(--primary-color);
+  font-size: 1rem;
 }
