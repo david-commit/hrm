@@ -14,7 +14,9 @@ export default function Landing() {
   function Landing() {
     return (
       <main id="landing">
-        <button id="landing-signup">Get started</button>
+        <button id="landing-signup" onClick={handleSignup}>
+          Get started
+        </button>
       </main>
     );
   }
