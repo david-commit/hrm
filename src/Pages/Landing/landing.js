@@ -8,7 +8,7 @@ export default function Landing() {
   let navigate = useNavigate();
 
   function handleSignup() {
-    navigate("/signup");
+    navigate("/login");
   }
 
   function Landing() {
@@ -22,9 +22,9 @@ export default function Landing() {
   }
   return (
     <>
-      <Header />
+      {/* <Header /> */}
       <Landing />
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 }

@@ -29,3 +29,6 @@ body {
   justify-content: center;
 }
 
+main {
+  min-height: 60vh;
+}
