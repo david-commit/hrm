@@ -12,6 +12,26 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
+
+        <Route path="/admin">
+          <Route path="/home" />
+        </Route>
+
+        <Route path="/client">
+          <Route path="/home" />
+        </Route>
+
+        <Route path="/department">
+          <Route path="/home" />
+        </Route>
+
+        <Route path="/supervisor">
+          <Route path="/home" />
+        </Route>
+
+        <Route path="/employee">
+          <Route path="/home" />
+        </Route>
       </Routes>
       <Footer />
     </BrowserRouter>
