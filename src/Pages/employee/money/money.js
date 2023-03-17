@@ -1,5 +1,6 @@
 import EmployeeNavBar from "../navbar/navbar";
 import "./oney.css";
+import React from "react";
 
 export default function EmployeeMoney() {
   return (
@@ -24,8 +25,24 @@ export default function EmployeeMoney() {
           </div>
         </div>
 
-        <div id="employee-money-cont2"></div>
-        <div id="employee-money-cont3"></div>
+        <div id="employee-money-cont2">
+          <div id="employee-money-cont2-1">
+            <p>Last weeks overview</p>
+            <div id="employee-last-chart"></div>
+          </div>
+
+          <div id="employee-money-cont2-2">
+            <p>Wages comparison</p>
+          </div>
+        </div>
+        <div id="employee-money-cont3">
+          <div id="employee-money-cont3-1">
+            <p>2 Weekly payroll</p>
+          </div>
+          <div id="employee-money-cont3-2">
+            <p>Monthly payroll</p>
+          </div>
+        </div>
       </section>
       <aside id="employee-payroll"></aside>
     </section>

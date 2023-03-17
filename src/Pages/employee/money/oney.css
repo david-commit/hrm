@@ -79,8 +79,33 @@
   border: thin solid black;
 }
 
+#employee-money-cont2 > * {
+  border: thin solid black;
+  height: 100%;
+}
+
+#employee-money-cont2-1 {
+  width: 60%;
+}
+
+#employee-money-cont2-2 {
+  width: 40%;
+}
+
 #employee-money-cont3 {
   width: 100%;
   height: 35%;
   border: thin solid black;
+}
+
+#employee-money-cont3 > * {
+  width: 50%;
+  height: 100%;
+  border: thin solid black;
+}
+
+#employee-money-cont3-1 {
+}
+
+#employee-money-cont3-2 {
 }
