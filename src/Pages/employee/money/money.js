@@ -1,6 +1,7 @@
 import EmployeeNavBar from "../navbar/navbar";
 import "./oney.css";
 import React from "react";
+import { FaDownload } from "react-icons/fa";
 
 export default function EmployeeMoney() {
   return (
@@ -44,7 +45,12 @@ export default function EmployeeMoney() {
           </div>
         </div>
       </section>
-      <aside id="employee-payroll"></aside>
+      <aside id="employee-payroll">
+        <button id="button-payslip">
+          <FaDownload />
+          <p>Download Payslip</p>
+        </button>
+      </aside>
     </section>
   );
 }
