@@ -23,6 +23,7 @@ ChartJS.register(
 );
 
 export default function EmployeeMoney() {
+  
   const data = {
     labels: ["Item 1", "Item 2"],
     datasets: [
