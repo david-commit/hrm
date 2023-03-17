@@ -8,7 +8,7 @@ export default function Landing() {
   let navigate = useNavigate();
 
   function handleSignup() {
-    navigate("/login");
+    navigate("/signup");
   }
 
   function Landing() {

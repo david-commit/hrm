@@ -1,3 +1,4 @@
+#signup,
 #login {
   width: 80%;
   border: thin solid var(--tertiary-color);
@@ -47,5 +48,3 @@
   margin-top: 1vh;
   margin-bottom: 1vh;
 }
-
-
