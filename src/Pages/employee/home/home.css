@@ -55,12 +55,11 @@
 #employee-home-stats2 {
   width: 40%;
   height: 100%;
-  border: thin solid black;
 }
 
 #employee-home-schedule {
   width: 100%;
-  height: 45%;
+  height: 44%;
   border: thin solid black;
   display: flex;
   flex-direction: row;
@@ -100,8 +99,8 @@
 }
 
 #upcoming-schedule-link {
-  width: 40%;
-  height: 15%;
+  width: 50%;
+  height: 12%;
   border: thin solid var(--tertiary-color);
   background-color: var(--tertiary-color);
   color: var(--primary-color);

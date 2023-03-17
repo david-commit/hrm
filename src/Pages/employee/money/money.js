@@ -2,8 +2,45 @@ import EmployeeNavBar from "../navbar/navbar";
 import "./oney.css";
 import React from "react";
 import { FaDownload } from "react-icons/fa";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 export default function EmployeeMoney() {
+  const data = {
+    labels: ["Item 1", "Item 2"],
+    datasets: [
+      {
+        label: "Item 1",
+        data: [82, 100],
+        borderColor: "black",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+      {
+        label: "Item 2",
+        data: [40, 80],
+        borderColor: "black",
+        backgroundColor: "rgba(53, 162, 235, 0.5)",
+      },
+    ],
+  };
+
   return (
     <section id="employee-cont">
       <EmployeeNavBar />
@@ -29,7 +66,12 @@ export default function EmployeeMoney() {
         <div id="employee-money-cont2">
           <div id="employee-money-cont2-1">
             <p>Last weeks overview</p>
-            <div id="employee-last-chart"></div>
+            <Bar
+              data={data}
+              options={{
+                responsive: true,
+              }}
+            />
           </div>
 
           <div id="employee-money-cont2-2">
