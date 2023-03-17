@@ -5,5 +5,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+}
+
+#employee-nav > * {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
