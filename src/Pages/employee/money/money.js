@@ -14,7 +14,18 @@ export default function EmployeeMoney() {
           </form>
         </header>
 
+        <div id="employee-money-cont1">
+          <p>This week</p>
+          <div id="employee-money-week">
+            <span className="employee-money-week-stats"></span>
+            <span className="employee-money-week-stats"></span>
+            <span className="employee-money-week-stats"></span>
+            <span className="employee-money-week-stats"></span>
+          </div>
+        </div>
 
+        <div id="employee-money-cont2"></div>
+        <div id="employee-money-cont3"></div>
       </section>
       <aside id="employee-payroll"></aside>
     </section>
