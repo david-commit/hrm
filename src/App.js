@@ -5,6 +5,8 @@ import Login from "./Pages/general/auth/login";
 import EmployeeHome from "./Pages/employee/home/home";
 import EmployeeMoney from "./Pages/employee/money/money";
 import Signup from "./Pages/general/auth/signup";
+import ClientSignup from "./Pages/client/signup/signup";
+import ClientHome from "./Pages/client/home/home";
 
 function App() {
   return (
@@ -19,7 +21,8 @@ function App() {
         </Route>
 
         <Route path="/client">
-          <Route path="home" />
+          <Route path="home" element={<ClientHome />} />
+          <Route path="signup" element={<ClientSignup />} />
         </Route>
 
         <Route path="/department">
