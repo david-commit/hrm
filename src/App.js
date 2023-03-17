@@ -4,6 +4,7 @@ import Landing from "./Pages/general/Landing/landing";
 import Login from "./Pages/general/auth/login";
 import EmployeeHome from "./Pages/employee/home/home";
 import EmployeeMoney from "./Pages/employee/money/money";
+import Signup from "./Pages/general/auth/signup";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/signup" element={<Signup />} />
 
         <Route path="/admin">
           <Route path="home" />
