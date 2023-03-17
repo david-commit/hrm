@@ -8,7 +8,10 @@ export default function EmployeeHome() {
       <EmployeeNavBar />
       <section id="employee-home">
         <header id="employee-home-header">
-          <p>Hello there Enock Mokua</p>
+          <p>
+            Hello there Enock Mokua <br />
+            Lets check your progress
+          </p>
           <form>
             <button type="submit">Submit</button>
             <input type="text" placeholder="Search for anything" />
@@ -31,7 +34,6 @@ export default function EmployeeHome() {
         <div id="employee-home-schedule">
           <div id="upcoming-tt">
             <h4>Upcoming Activity</h4>
-
           </div>
           <div id="upcoming-schedule">
             <h4>Upcoming Schedule</h4>
