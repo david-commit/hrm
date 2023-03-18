@@ -1,0 +1,17 @@
+#employee-nav {
+  width: 5vw;
+  height: 100%;
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#employee-nav > * {
+  font-size: 0.8rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}

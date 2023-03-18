@@ -1,14 +1,14 @@
 import "./landing.css";
 
 import { useNavigate } from "react-router-dom";
-import Footer from "../../Components/Static/footer/footer";
-import Header from "../../Components/Static/header/header";
+import Footer from "../../../Components/Static/footer/footer";
+import Header from "../../../Components/Static/header/header";
 
 export default function Landing() {
   let navigate = useNavigate();
 
   function handleSignup() {
-    navigate("/login");
+    navigate("/signup");
   }
 
   function Landing() {
@@ -22,9 +22,9 @@ export default function Landing() {
   }
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <Landing />
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }

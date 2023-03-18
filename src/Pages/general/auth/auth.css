@@ -1,0 +1,50 @@
+#signup,
+#login {
+  width: 80%;
+  border: thin solid var(--tertiary-color);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#login-form {
+  /* border: thin solid var(--tertiary-color); */
+  width: 50%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#login-form > input {
+  display: flex;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 5vh;
+  text-align: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  border: thin solid var(--tertiary-color);
+}
+
+#login-form > button {
+  height: 5vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  width: 70%;
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  border: thin solid var(--tertiary-color);
+  border-radius: 4px;
+}
+#login-form > h4 {
+  color: var(--tertiary-color);
+  font-size: 1.3rem;
+  height: 4vh;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}

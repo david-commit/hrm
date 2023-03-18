@@ -1,0 +1,108 @@
+#employee-cont {
+  width: 99.5vw;
+  border: thin solid black;
+  height: 99.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#employee-home {
+  width: 70vw;
+  height: 100%;
+}
+
+#employee-home-header {
+  width: 100;
+  height: 10%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#employee-home-stats {
+  width: 100%;
+  height: 45%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#employee-home-stats > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#employee-home-stats1 {
+  width: 60%;
+  height: 100%;
+  border: thin solid black;
+}
+
+.employee-home-stats-bars {
+  width: 90%;
+  height: 25%;
+  border: thin solid black;
+  border-radius: 4px;
+}
+#employee-home-stats2 {
+  width: 40%;
+  height: 100%;
+}
+
+#employee-home-schedule {
+  width: 100%;
+  height: 44%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#upcoming-tt {
+  width: 50%;
+  height: 100%;
+  border: thin solid black;
+}
+
+#upcoming-schedule {
+  width: 50%;
+  height: 100%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#upcoming-schedule > h4,
+#upcoming-tt > h4 {
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.upcoming-schedule-cont {
+  width: 80%;
+  height: 20%;
+  border-radius: 4px;
+  background-color: var(--tertiary-color);
+}
+
+#upcoming-schedule-link {
+  width: 50%;
+  height: 12%;
+  border: thin solid var(--tertiary-color);
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  border-radius: 100px;
+}

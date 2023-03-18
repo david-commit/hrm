@@ -1,0 +1,26 @@
+#client-nav-bar {
+  width: 5vw;
+  height: 100%;
+  background-color: var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#client-nav-bar > span {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#client-bar-info {
+  height: 40%;
+}
+
+#client-bar-info > * {
+  color: var(--primary-color);
+  font-size: 0.8rem;
+}
