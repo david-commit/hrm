@@ -50,6 +50,7 @@ export default function ClientSignup() {
               placeholder="Brief descritpion of your organisation"
             />
           </span>
+
           <span>
             <label for="org-type">Select organization type:</label>
             <select id="org-type" name="org-type">
@@ -71,6 +72,7 @@ export default function ClientSignup() {
               </option>
             </select>
           </span>
+          
           <button type="submit" id="submit-client-signup">
             Submit
           </button>
