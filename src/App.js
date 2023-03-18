@@ -8,6 +8,7 @@ import Signup from "./Pages/general/auth/signup";
 import ClientSignup from "./Pages/client/signup/signup";
 import ClientHome from "./Pages/client/home/home";
 import ClientMoney from "./Pages/client/money/money";
+import ClientEmployee from "./Pages/client/employee/employee";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="home" element={<ClientHome />} />
           <Route path="signup" element={<ClientSignup />} />
           <Route path="money" element={<ClientMoney />} />
+          <Route path="employee" element={<ClientEmployee />} />
         </Route>
 
         <Route path="/department">
