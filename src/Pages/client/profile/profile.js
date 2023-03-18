@@ -1,11 +1,11 @@
 import ClientBar from "../navbar/navbar";
-import "./home.css";
+import "./profile.css";
 
-export default function ClientHome() {
+export default function ClientProfile() {
   return (
     <section id="client-cont">
       <ClientBar />
-      <section id="client-home">client home</section>
+      <section id="client-profile">client profile</section>
     </section>
   );
 }

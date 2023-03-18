@@ -9,6 +9,7 @@ import ClientSignup from "./Pages/client/signup/signup";
 import ClientHome from "./Pages/client/home/home";
 import ClientMoney from "./Pages/client/money/money";
 import ClientEmployee from "./Pages/client/employee/employee";
+import ClientProfile from "./Pages/client/profile/profile";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           <Route path="signup" element={<ClientSignup />} />
           <Route path="money" element={<ClientMoney />} />
           <Route path="employee" element={<ClientEmployee />} />
+          <Route path="profile" element={<ClientProfile />} />
         </Route>
 
         <Route path="/department">
