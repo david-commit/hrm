@@ -25,6 +25,8 @@ export default function ClientSignup() {
             type="file"
             accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
           />
+
+          <button type="submit">Submit</button>
         </form>
 
         <></>
