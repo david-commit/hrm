@@ -19,13 +19,15 @@ export default function ClientSignup() {
         </div>
 
         <form id="client-signup-form">
-          <div class="upload-btn-wrapper">
-            <button class="btn">Upload a file</button>
-            <input type="file" name="myfile" />
-          </div>
+          <p>Upload the data sheet here</p>
+          <input
+            className="custom-file-upload"
+            type="file"
+            accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+          />
         </form>
 
-        
+        <></>
       </section>
     </section>
   );
