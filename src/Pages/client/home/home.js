@@ -16,8 +16,7 @@ export default function ClientHome() {
             <p>Total Employees</p>
             <span>
               <p>1000</p>
-
-              <p className="sts">
+              <p className="sts-up">
                 <RiArrowUpSLine />
                 8.5%
               </p>
@@ -28,8 +27,18 @@ export default function ClientHome() {
             <p>Total Employees</p>
             <span>
               <p>1000</p>
+              <p className="sts-down">
+                <RiArrowDownSLine />
+                8.5%
+              </p>
+            </span>
+          </span>
 
-              <p className="sts">
+          <span className="client-home-employees">
+            <p>Total Employees</p>
+            <span>
+              <p>1000</p>
+              <p className="sts-up">
                 <RiArrowUpSLine />
                 8.5%
               </p>
@@ -40,9 +49,8 @@ export default function ClientHome() {
             <p>Total Employees</p>
             <span>
               <p>1000</p>
-
-              <p className="sts">
-                <RiArrowUpSLine />
+              <p className="sts-down">
+                <RiArrowDownSLine />
                 8.5%
               </p>
             </span>
@@ -52,20 +60,7 @@ export default function ClientHome() {
             <p>Total Employees</p>
             <span>
               <p>1000</p>
-
-              <p className="sts">
-                <RiArrowUpSLine />
-                8.5%
-              </p>
-            </span>
-          </span>
-
-          <span className="client-home-employees">
-            <p>Total Employees</p>
-            <span>
-              <p>1000</p>
-
-              <p className="sts">
+              <p className="sts-up">
                 <RiArrowUpSLine />
                 8.5%
               </p>
