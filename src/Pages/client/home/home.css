@@ -25,3 +25,15 @@
   align-items: center;
   justify-content: space-evenly;
 }
+
+.notifications {
+  background-color: transparent;
+  width: 3vw;
+  height: 4vh;
+}
+
+.notifications > * {
+  height: 100%;
+  width: 100%;
+  color: var(--tertiary-color);
+}

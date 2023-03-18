@@ -1,5 +1,6 @@
 import "./home.css";
 import { FaBell } from "react-icons/fa";
+import { FaComment } from "react-icons/fa";
 
 export default function ClientHeader() {
   return (
@@ -15,9 +16,14 @@ export default function ClientHeader() {
           <input type="text" placeholder="Search for anything ..." />
         </form>
 
-        <button>
+        <button className="notifications">
           <FaBell />
         </button>
+
+        <button className="notifications">
+          <FaComment />
+        </button>
+        
       </span>
     </header>
   );
