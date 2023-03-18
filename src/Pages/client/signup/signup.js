@@ -19,7 +19,6 @@ export default function ClientSignup() {
         </div>
 
         <form id="client-signup-form">
-        
           <span id="client-signup-form-upload">
             <p>Upload the data sheet here</p>
             <input
@@ -35,13 +34,22 @@ export default function ClientSignup() {
           </span>
 
           <span>
+            <label>Registration number</label>
+            <input type="text" placeholder="Registartion Number" />
+          </span>
+
+          <span>
+            <label>Date of incoporation</label>
+            <input type="text" placeholder="Date of incoporation" />
+          </span>
+
+          <span>
             <label> Brief description of organisation</label>
             <input
               type="text"
               placeholder="Brief descritpion of your organisation"
             />
           </span>
-
           <span>
             <label for="org-type">Select organization type:</label>
             <select id="org-type" name="org-type">
@@ -63,7 +71,6 @@ export default function ClientSignup() {
               </option>
             </select>
           </span>
-
           <button type="submit" id="submit-client-signup">
             Submit
           </button>
