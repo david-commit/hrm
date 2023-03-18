@@ -1,19 +1,20 @@
 import "./home.css";
 import { FaBell } from "react-icons/fa";
 import { FaComment } from "react-icons/fa";
+import { FaSearch } from "react-icons/fa";
 
 export default function ClientHeader() {
   return (
     <header id="client-home-header">
       <div>
-        <h3>Good morning, Hr. Manager</h3>
+        <h3>Good morning, Enock</h3>
         <p>Hope you have a wonderful day</p>
       </div>
 
       <span>
-        <form>
-          <button>Search</button>
-          <input type="text" placeholder="Search for anything ..." />
+        <form id="header-search">
+          <FaSearch id="search-icon" />
+          <input type="text" placeholder="Search" />
         </form>
 
         <button className="notifications">
@@ -23,7 +24,6 @@ export default function ClientHeader() {
         <button className="notifications">
           <FaComment />
         </button>
-        
       </span>
     </header>
   );
