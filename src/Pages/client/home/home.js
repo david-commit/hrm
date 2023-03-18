@@ -1,6 +1,8 @@
 import ClientBar from "../navbar/navbar";
 import "./home.css";
 import ClientHeader from "./header";
+import { RiArrowUpSLine } from "react-icons/ri";
+import { RiArrowDownSLine } from "react-icons/ri";
 
 export default function ClientHome() {
   return (
@@ -8,6 +10,25 @@ export default function ClientHome() {
       <ClientBar />
       <section id="client-home">
         <ClientHeader />
+
+        <div id="client-home-employees">
+
+          <span className="client-home-employees">
+            <p>Total Employees</p>
+              <span>
+                <p>1000</p>
+
+                <p className="sts">
+                  <RiArrowUpSLine />
+                  8.5%
+                </p>
+            </span>
+          </span>
+
+          <span className="client-home-employees"></span>
+          <span className="client-home-employees"></span>
+          <span className="client-home-employees"></span>
+        </div>
       </section>
     </section>
   );
