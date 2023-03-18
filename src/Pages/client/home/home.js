@@ -8,11 +8,11 @@ export default function ClientHome() {
     <section id="client-cont">
       <ClientBar />
       <section id="client-home">
-        <header>
-          <span>
+        <header id="client-home-header">
+          <div>
             <h3>Good morning, Hr. Manager</h3>
             <p>Hope you have a wonderful day</p>
-          </span>
+          </div>
 
           <span>
             <form>

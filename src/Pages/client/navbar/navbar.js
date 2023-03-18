@@ -12,7 +12,9 @@ export default function ClientBar() {
         <Link to="/client/employee">Employees</Link>
         <Link to="/client/signup">Signup</Link>
       </span>
-      <span id="client-bar-foot"></span>
+      <span id="client-bar-foot">
+        <Link to="/">Home</Link>
+      </span>
     </aside>
   );
 }
