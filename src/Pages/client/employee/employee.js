@@ -94,7 +94,15 @@ export default function ClientEmployee() {
         </div>
 
         <div id="client-employee-info">
-          <div id="client-employee-cases"></div>
+          <div id="client-employee-cases">
+            <p className="container-title">Enock's Schedule</p>
+            <div id="client-employee-schedule">
+              <span className="client-employee-schedule-span">ssss</span>{" "}
+              <span className="client-employee-schedule-span">ssss</span>{" "}
+              <span className="client-employee-schedule-span">ssss</span>{" "}
+              <span className="client-employee-schedule-span">ssss</span>
+            </div>
+          </div>
           <div id="client-employee-location">
             <p>Recent locations</p>
             <DeviceMap />
