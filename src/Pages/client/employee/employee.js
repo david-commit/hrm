@@ -3,6 +3,7 @@ import ClientBar from "../navbar/navbar";
 import "./employee.css";
 import { FaArrowUp } from "react-icons/fa";
 import { FaArrowDown } from "react-icons/fa";
+import DeviceMap from "./map";
 
 export default function ClientEmployee() {
   return (
@@ -96,6 +97,7 @@ export default function ClientEmployee() {
           <div id="client-employee-cases"></div>
           <div id="client-employee-location">
             <p>Recent locations</p>
+            <DeviceMap />
           </div>
         </div>
       </section>

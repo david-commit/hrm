@@ -227,3 +227,12 @@ select:focus {
   justify-content: space-evenly;
 }
 
+.leaflet {
+  height: 100%;
+  width: 100%;
+}
+
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+}
