@@ -68,7 +68,7 @@ export default function ClientHome() {
     <section id="client-cont">
       <ClientBar />
       <section id="client-home">
-        <ClientHeader />
+        <ClientHeader message="Here is a breakdown of your organisation." />
 
         <div id="client-home-employees">
           <span className="client-home-employees">
