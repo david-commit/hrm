@@ -16,6 +16,8 @@ import {
   Legend,
 } from "chart.js";
 
+import { FaSearch } from "react-icons/fa";
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -168,7 +170,35 @@ export default function ClientHome() {
           </div>
         </div>
 
-        <></>
+        <div id="client-home-emps">
+          <div id="client-home-emps-header">
+            <h3>Employee Status</h3>
+            <form id="client-home-emps-form">
+              <FaSearch />
+              <input type="text" placeholder="search" />
+            </form>
+          </div>
+
+          <div id="client-home-emps-head">
+            <span className="client-home-emps-number">Employee no.</span>
+            <span className="client-home-emps-name">Employee Name</span>
+            <span className="client-home-emps-sex">Gender</span>
+            <span className="client-home-emps-days">Total days</span>
+            <span className="client-home-emps-missed">Days Missed</span>
+            <span className="client-home-emps-gross">Total gross Earnings</span>
+            <span className="client-home-emps-net">Total Net Earnings</span>
+          </div>
+
+          <div className="client-home-emps-child">
+            <span className="client-home-emps-number">22</span>
+            <span className="client-home-emps-name">Enock MOkua</span>
+            <span className="client-home-emps-sex">Male</span>
+            <span className="client-home-emps-days">123</span>
+            <span className="client-home-emps-missed">9</span>
+            <span className="client-home-emps-gross">10900</span>
+            <span className="client-home-emps-net">7000</span>
+          </div>
+        </div>
       </section>
     </section>
   );
