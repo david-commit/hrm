@@ -74,27 +74,29 @@ export default function ClientEmployee() {
           <div id="client-employee-payroll">
             <h3>View reports for Enock</h3>
 
-              <span>
-                <label>Select period for the report.</label>
-                <select>
-                  <option value="2 week">1 month</option>
-                  <option value="1 month">1 month</option>
-                  <option value="3 months">3 months</option>
-                  <option value="6 months">6 months</option>
-                  <option value="1 year">1 year</option>
-                </select>
-              </span>
-              <div id="report-buttons">
-                <button className="report-button">View payroll</button>
-                <button className="report-button">Disciplinary report</button>
-                <button className="report-button">Attendance report</button>
-              </div>
+            <span>
+              <label>Select period for the report.</label>
+              <select>
+                <option value="2 week">1 month</option>
+                <option value="1 month">1 month</option>
+                <option value="3 months">3 months</option>
+                <option value="6 months">6 months</option>
+                <option value="1 year">1 year</option>
+              </select>
+            </span>
+            <div id="report-buttons">
+              <button className="report-button">View payroll</button>
+              <button className="report-button">Disciplinary report</button>
+              <button className="report-button">Attendance report</button>
             </div>
+          </div>
         </div>
 
         <div id="client-employee-info">
           <div id="client-employee-cases"></div>
-          <div id="client-employee-location"></div>
+          <div id="client-employee-location">
+            <p>Recent locations</p>
+          </div>
         </div>
       </section>
     </section>
