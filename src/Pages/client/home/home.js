@@ -71,17 +71,6 @@ export default function ClientHome() {
         <ClientHeader />
 
         <div id="client-home-employees">
-          {/* <span className="client-home-employees">
-            <p>Total Employees</p>
-            <span>
-              <p>1000</p>
-              <p className="sts-up">
-                <RiArrowUpSLine />
-                8.5%
-              </p>
-            </span>
-          </span> */}
-
           <span className="client-home-employees">
             <p>Total Employees</p>
             <span>
