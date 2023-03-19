@@ -3,6 +3,7 @@ import "./oney.css";
 import React from "react";
 import { FaDownload } from "react-icons/fa";
 import { Bar } from "react-chartjs-2";
+import Payslip from "../../../Components/finance/payslip";
 import {
   Chart as ChartJS,
   CategoryScale,
@@ -23,7 +24,6 @@ ChartJS.register(
 );
 
 export default function EmployeeMoney() {
-  
   const data = {
     labels: ["Item 1", "Item 2"],
     datasets: [
@@ -39,6 +39,18 @@ export default function EmployeeMoney() {
         borderColor: "black",
         backgroundColor: "rgba(53, 162, 235, 0.5)",
       },
+    ],
+  };
+
+  const employee = {
+    name: "John Smith",
+    earnings: [
+      { description: "Salary", amount: 5000 },
+      { description: "Bonus", amount: 1000 },
+    ],
+    deductions: [
+      { description: "Tax", amount: 1000 },
+      { description: "Insurance", amount: 500 },
     ],
   };
 
@@ -92,6 +104,7 @@ export default function EmployeeMoney() {
         <button id="button-payslip">
           <FaDownload />
           <p>Download Payslip</p>
+          <Payslip employee={employee} />
         </button>
       </aside>
     </section>

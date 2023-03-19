@@ -28,7 +28,8 @@ export default function Payslip({ employee }) {
       head: [["Description", "Amount"]],
       body: deductionsData,
     });
-    doc.save("payslip.pdf");
+    // Open the generated PDF in a separate browser tab
+    doc.output("dataurlnewwindow");
   };
-  return <button></button>;
+  return <button onClick={generatePayslip}>Download Payslip</button>;
 }
