@@ -5,25 +5,63 @@ import { RiArrowUpSLine } from "react-icons/ri";
 import { RiArrowDownSLine } from "react-icons/ri";
 import { Pie } from "@nivo/pie";
 import { ThemeProvider, SvgWrapper } from "@nivo/core";
+import { Bar } from "react-chartjs-2";
+import {
+  Chart as ChartJS,
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend,
+} from "chart.js";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Title,
+  Tooltip,
+  Legend
+);
 
 let data = [
   {
     id: "Item1",
     value: 410,
-    color: "hsl(19, 70%, 50%)",
+    color: "#618B25",
   },
   {
     id: "Item2",
     value: 175,
-    color: "hsl(213, 70%, 50%)",
+    color: "#C0F8D1",
   },
   {
     id: "Item3",
     value: 128,
-    color: "hsl(58, 70%, 50%)",
+    color: "hsl(140, 18%, 16%)",
   },
 ];
+
 export default function ClientHome() {
+  const datal = {
+    labels: ["Item 1", "Item 2"],
+    datasets: [
+      {
+        label: "Item 1",
+        data: [82, 100],
+        borderColor: "black",
+        backgroundColor: "rgba(255, 99, 132, 0.5)",
+      },
+      {
+        label: "Item 2",
+        data: [40, 80],
+        borderColor: "black",
+        backgroundColor: "rgba(53, 162, 235, 0.5)",
+      },
+    ],
+  };
+
   return (
     <section id="client-cont">
       <ClientBar />
@@ -90,6 +128,14 @@ export default function ClientHome() {
         <div id="client-home-chart">
           <div id="client-home-bar">
             <p className="client-home-chart-title">Deductions and Net pay</p>
+            <div className="chart-container">
+              <Bar
+                data={datal}
+                options={{
+                  responsive: true,
+                }}
+              />
+            </div>
           </div>
           <div id="client-home-pie">
             <p className="client-home-chart-title">Gender balance</p>
@@ -117,7 +163,6 @@ export default function ClientHome() {
                   width={400}
                   margin={{ left: 0, right: 0, top: 0, bottom: 0 }}
                 ></SvgWrapper>
-
               </ThemeProvider>
             </div>
           </div>

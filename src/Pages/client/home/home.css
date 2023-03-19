@@ -213,6 +213,20 @@ input:focus {
   justify-content: center;
 }
 
-#client-home-pie > div > {
-  border: thin solid black;
+#client-home-pie > div > div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+canvas {
+  width: 95%;
 }
