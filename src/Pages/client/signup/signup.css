@@ -117,15 +117,6 @@
   cursor: pointer;
 }
 
-textarea {
-  width: 80%;
-  height: 30vw;
-}
-
-textarea:focus {
-  outline: none;
-}
-
 .file-upload-input::file-selector-button:hover {
   background-color: #0069d9;
 }
