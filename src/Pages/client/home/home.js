@@ -93,6 +93,30 @@ export default function ClientHome() {
           </div>
           <div id="client-home-pie">
             <p className="client-home-chart-title">Gender balance</p>
+            <div>
+              <Pie
+                width={400}
+                height={400}
+                data={data}
+                margin={{
+                  top: 40,
+                  right: 80,
+                  bottom: 80,
+                  left: 80,
+                }}
+                innerRadius={0.5}
+                padAngle={0.7}
+                cornerRadius={3}
+                borderColor="inherit:darker(0.6)"
+              />
+              <ThemeProvider>
+                <SvgWrapper
+                  height={100}
+                  width={400}
+                  margin={{ left: 0, right: 0, top: 0, bottom: 0 }}
+                ></SvgWrapper>
+              </ThemeProvider>
+            </div>
           </div>
         </div>
 
