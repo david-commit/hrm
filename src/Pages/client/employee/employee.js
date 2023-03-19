@@ -8,9 +8,9 @@ export default function ClientEmployee() {
       <ClientBar />
 
       <section id="client-employee">
-        <ClientHeader />
+        <ClientHeader message="Welcome to Enock's profile." />
         <div id="client-employee-stats">
-          <div id="client-employee-attendace"></div>
+          <div id="client-employee-attendace">ddggdg</div>
           <div id="client-employee-payroll"></div>
         </div>
 

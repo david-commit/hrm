@@ -1,0 +1,16 @@
+#client-employee {
+  width: 95vw;
+  height: 100%;
+}
+
+#client-employee-stats {
+  width: 100%;
+  height: 50%;
+  border: thin solid black;
+}
+
+#client-employee-info {
+  width: 100%;
+  height: 40%;
+  border: thin solid black;
+}

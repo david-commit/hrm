@@ -3,12 +3,12 @@ import { FaBell } from "react-icons/fa";
 import { FaComment } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
 
-export default function ClientHeader() {
+export default function ClientHeader(props) {
   return (
     <header id="client-home-header">
       <div>
         <h3>Good morning, Enock</h3>
-        <p>Hope you have a wonderful day</p>
+        <p>{props.message}</p>
       </div>
 
       <span>
