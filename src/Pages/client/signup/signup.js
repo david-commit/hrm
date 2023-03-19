@@ -22,8 +22,9 @@ export default function ClientSignup() {
           <span id="client-signup-form-upload">
             <p>Upload the data sheet here</p>
             <input
-              className="custom-file-upload"
               type="file"
+              placeholder="Upload file"
+              className="file-upload-input"
               accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
             />
           </span>
@@ -72,7 +73,7 @@ export default function ClientSignup() {
               </option>
             </select>
           </span>
-          
+
           <button type="submit" id="submit-client-signup">
             Submit
           </button>
