@@ -48,6 +48,32 @@ export default function ClientProfile() {
             </span>
             <button type="submit">Update</button>
           </form>
+
+          <form>
+            <h3>Financial details</h3>
+            <span>
+              <input type="text" placeholder="KRA pin" />
+              <input type="text" placeholder="NSSF number" />
+              <input type="text" placeholder="NHIF number" />
+              <input type="text" placeholder="Bank name" />
+              <input type="text" placeholder="Bank branch" />
+              <input type="text" placeholder="Bank account number" />
+            </span>
+            <button type="submit">Update details</button>
+          </form>
+
+          <form>
+            <h3>Payment details</h3>
+            <span>
+              <label>Set payment range for permanent employees.</label>
+              <select>
+                <option value="one-week">One week</option>
+                <option value="two-week">Two weeks</option>
+                <option value="one-month">One month</option>
+              </select>
+            </span>
+            <button type="submit">Update details</button>
+          </form>
         </section>
       </section>
     </section>
