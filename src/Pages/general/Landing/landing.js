@@ -14,7 +14,7 @@ export default function Landing() {
   function Landing() {
     return (
       <main id="landing">
-        <section id="landing-section1">
+        <div id="landing-section1">
           <div id="landing-section-1-1">
             <h3>
               Powering organisations through <br /> proper people management
@@ -28,7 +28,31 @@ export default function Landing() {
             </button>
           </div>
           <div id="landing-section-1-2"></div>
-        </section>
+        </div>
+
+        <div id="landing-section2">
+          <h3>Our Partners</h3>
+          <div id="our-partners">
+            <span>
+              <img src="#" alt="partner" />
+              <p>Partner 1</p>
+            </span>
+            <span>
+              <img src="#" alt="partner" />
+              <p>Partner 1</p>
+            </span>
+            <span>
+              <img src="#" alt="partner" />
+              <p>Partner 1</p>
+            </span>
+            <span>
+              <img src="#" alt="partner" />
+              <p>Partner 1</p>
+            </span>
+          </div>
+        </div>
+
+        <section id="landing-section3"></section>
       </main>
     );
   }
