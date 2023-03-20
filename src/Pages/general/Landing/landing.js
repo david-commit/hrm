@@ -21,7 +21,7 @@ export default function Landing() {
             and automate salaries for you.
           </p>
           <button id="landing-signup" onClick={handleSignup}>
-            Get started
+            Register Organisation
           </button>
         </section>
       </main>

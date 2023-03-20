@@ -1,7 +1,6 @@
 #signup,
 #login {
   width: 80%;
-  border: thin solid var(--tertiary-color);
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -9,7 +8,6 @@
 }
 
 #login-form {
-  /* border: thin solid var(--tertiary-color); */
   width: 50%;
   height: max-content;
   display: flex;

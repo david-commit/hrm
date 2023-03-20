@@ -16,12 +16,12 @@ export default function Signup() {
       <main id="signup">
         <div></div>
         <form id="login-form">
-          <h4>Login Into your Account</h4>
+          <h4>Register Organisation</h4>
           <input type="text" placeholder="Email Address" />
           <input type="text" placeholder="Password" />
           <input type="text" placeholder="Confirm Password" />
           <button type="submit" onClick={handleSignup}>
-            Login
+            Register
           </button>
           <Link to="reset">Forgot password?</Link>
         </form>
