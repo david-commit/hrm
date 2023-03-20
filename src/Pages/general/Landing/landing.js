@@ -15,14 +15,19 @@ export default function Landing() {
     return (
       <main id="landing">
         <section id="landing-section1">
-          <h3>Powering organisations through proper people management</h3>
-          <p>
-            We provide a scalable human resource syste for your organisations
-            and automate salaries for you.
-          </p>
-          <button id="landing-signup" onClick={handleSignup}>
-            Register Organisation
-          </button>
+          <div id="landing-section-1-1">
+            <h3>
+              Powering organisations through <br /> proper people management
+            </h3>
+            <p>
+              We provide a scalable human resource syste for your organisations
+              and automate salaries for you.
+            </p>
+            <button id="landing-signup" onClick={handleSignup}>
+              Register Organisation
+            </button>
+          </div>
+          <div id="landing-section-1-2"></div>
         </section>
       </main>
     );

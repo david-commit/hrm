@@ -31,7 +31,7 @@ export default function ClientSignup() {
           </span>
 
           <span>
-            <p>Approve payment for casual</p>
+            <p>Approve payment for casual employees</p>
             <button>Approve</button>
           </span>
         </div>
