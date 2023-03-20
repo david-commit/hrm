@@ -1,6 +1,6 @@
 import "./landing.css";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../../Components/Static/footer/footer";
 import Header from "../../../Components/Static/header/header";
 
@@ -60,7 +60,7 @@ export default function Landing() {
 
           <div id="our-partners-container">
             <span>
-              <h4>Autoated</h4>
+              <h4>Automated</h4>
             </span>
             <span></span>
             <span></span>
@@ -77,8 +77,24 @@ export default function Landing() {
           <div id="landing-section5-header"></div>
           <div id="landing-section5-cont"></div>
         </section>
-        
-        <section id="landing-section6"></section>
+
+        <section id="landing-section6">
+          <h3>Register your organisation.</h3>
+          <p>
+            Register your organnisation today on HR Tech and unleash the power
+            of productivity in your organisation through proper people anagement
+            and automation of processes or book a demo with one of our CMO.
+          </p>
+
+          <span>
+            <Link to="/signup" className="book-link" id="book-link1">
+              Join Us
+            </Link>
+            <Link to="/signup" className="book-link" id="book-link2">
+              Book a Demo
+            </Link>
+          </span>
+        </section>
       </main>
     );
   }
