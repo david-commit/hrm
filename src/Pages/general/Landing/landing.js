@@ -52,7 +52,21 @@ export default function Landing() {
           </div>
         </div>
 
-        <section id="landing-section3"></section>
+        <section id="landing-section3">
+          <div id="landing-section3-header">
+            <h3>Traditionsl H.R Solutions are outdated.</h3>
+            <p>Why you should join HR Tech Int.</p>
+          </div>
+
+          <div id="our-partners-container">
+            <span>
+              <h4>Autoated</h4>
+            </span>
+            <span></span>
+            <span></span>
+          </div>
+
+        </section>
       </main>
     );
   }

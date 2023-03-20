@@ -80,3 +80,39 @@
   align-items: center;
   justify-content: center;
 }
+
+#landing-section3 {
+  height: 70vh;
+  width: 80%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#landing-section3-header {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: thin solid black;
+}
+
+#our-partners-container {
+  height: 80%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#our-partners-container > span {
+  width: 23%;
+  height: 80%;
+  border: thin solid black;
+  border-radius: 10px;
+}
