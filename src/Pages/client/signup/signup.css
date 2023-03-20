@@ -15,98 +15,17 @@
   align-items: center;
   justify-content: flex-start;
 }
-
-#client-signup-header {
+#client-signup > form,
+#client-signup > div {
   width: 100%;
-  height: 10%;
   border: thin solid black;
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.client-signup-header-span {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-#client-signup-download {
-  width: 100%;
-  height: 10%;
-  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
 }
 
-#client-signup-download > p {
-  font-size: 1rem;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#download-excel {
-  width: 25%;
-  height: 50%;
-  border: thin solid var(--tertiary-color);
-  border-radius: 4px;
-  background-color: var(--tertiary-color);
-  color: var(--primary-color);
-  font-size: 1rem;
-}
-
-#client-signup-form-details {
-  width: 100%;
-  height: 70%;
-}
-#client-signup-form {
-  width: 100%;
-  height: 70%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  border: thin solid black;
-}
-
-.custom-file-upload {
-  border: thin solid black;
-  border-radius: 4px;
-  width: 30%;
-  display: flex;
-  font-size: 1rem;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-#client-signup-form-details {
-  width: 100%;
-  height: max-content;
-  display: flex;
-  font-size: 1rem;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
-#submit-client-signup {
-  width: 30%;
-  height: 5vh;
-  border: thin solid var(--tertiary-color);
-  background-color: var(--tertiary-color);
-  border-radius: 4px;
-  color: var(--primary-color);
-  font-size: 1rem;
-}
-
-.file-upload-input::file-selector-button {
+/* .file-upload-input::file-selector-button {
   background-color: #007bff;
   color: #fff;
   padding: 1vh 2vh;
@@ -119,4 +38,4 @@
 
 .file-upload-input::file-selector-button:hover {
   background-color: #0069d9;
-}
+} */
