@@ -7,9 +7,21 @@
   justify-content: flex-start;
 }
 
-#client-money > * {
+#client-money > div,
+#client-money > form {
   width: 100%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
   border: thin solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#client-money input {
+  text-align: center;
+  height: 4vh;
 }
 
 #client-money button {

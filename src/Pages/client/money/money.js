@@ -7,13 +7,17 @@ export default function ClientMoney() {
     <section id="client-cont">
       <ClientBar />
       <section id="client-money">
-        <ClientHeader />
+        <ClientHeader message="Add new employees to your organisation" />
         <div>
           <h2>Add new employee to your organisation</h2>
           <button type="download">Download excel sheet</button>
         </div>
         <form>
           <h4>Mass add employees for your organisation.</h4>
+          <p>
+            Download the excel sheet, fill out your employees details then
+            upload it.
+          </p>
           <input type="file" />
           <button type="submit">Add employees</button>
         </form>
