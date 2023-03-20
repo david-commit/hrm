@@ -8,6 +8,11 @@
   justify-content: flex-start;
 }
 
+#landing > * {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
 #landing-section1 {
   width: 80%;
   height: 60vh;
@@ -161,4 +166,11 @@
   width: 100%;
   height: 75%;
   border: thin solid black;
+}
+
+#landing-section6 {
+  width: 80%;
+  height: 40vh;
+  border: thin solid black;
+  border-radius: 10px;
 }

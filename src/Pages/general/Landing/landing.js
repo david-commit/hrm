@@ -77,6 +77,7 @@ export default function Landing() {
           <div id="landing-section5-header"></div>
           <div id="landing-section5-cont"></div>
         </section>
+        
         <section id="landing-section6"></section>
       </main>
     );
