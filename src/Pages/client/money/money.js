@@ -8,21 +8,24 @@ export default function ClientMoney() {
       <ClientBar />
       <section id="client-money">
         <ClientHeader />
-        <h3>Add new employee to your organisation</h3>
+        <div>
+          <h2>Add new employee to your organisation</h2>
+          <button type="download">Download excel sheet</button>
+        </div>
         <form>
           <h4>Mass add employees for your organisation.</h4>
           <input type="file" />
           <button type="submit">Add employees</button>
         </form>
+
         <form>
           <h4>Add a single employee</h4>
-          <span>
+          <div>
             <input type="text" placeholder="First name" />
             <input type="text" placeholder="Second name" />
             <input type="text" placeholder="Third name" />
             <input type="number" placeholder="Id number" />
-          </span>
-
+          </div>
           <button type="submit">Register employee</button>
         </form>
       </section>

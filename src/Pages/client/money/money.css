@@ -11,3 +11,9 @@
   width: 100%;
   border: thin solid black;
 }
+
+#client-money button {
+  width: 20%;
+  height: 4vh;
+  border: thin solid var(--tertiary-color);
+}
