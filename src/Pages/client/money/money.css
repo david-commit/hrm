@@ -1,0 +1,13 @@
+#client-money {
+  width: 95vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#client-money > * {
+  width: 100%;
+  border: thin solid black;
+}
