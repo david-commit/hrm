@@ -3,6 +3,9 @@ import "./landing.css";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../../../Components/Static/footer/footer";
 import Header from "../../../Components/Static/header/header";
+import { FiBox } from "react-icons/fi";
+import { AiOutlineTool } from "react-icons/ai";
+import { IoMdAnalytics } from "react-icons/io";
 
 export default function Landing() {
   let navigate = useNavigate();
@@ -54,16 +57,53 @@ export default function Landing() {
 
         <section id="landing-section3">
           <div id="landing-section3-header">
-            <h3>Traditionsl H.R Solutions are outdated.</h3>
-            <p>Why you should join HR Tech Int.</p>
+            <h3>
+              Traditional HR Solutions are <br />
+              outdated
+            </h3>
+            <p>Why you should join HR Tech Int</p>
           </div>
 
           <div id="our-partners-container">
-            <span>
-              <h4>Automated</h4>
+            <span className="section3-containers">
+              <span>
+                <FiBox />
+              </span>
+              <strong>Simplicity</strong>
+              <h5>Focus On Things That Are Important</h5>
+              <p>
+                Our solution is easy to use and adaptive to teams needs and
+                size. We also provide custoized solutons and its a pay as you go
+                service.
+              </p>
             </span>
-            <span></span>
-            <span></span>
+
+            <span className="section3-containers">
+              <span>
+                <AiOutlineTool />
+              </span>
+              <strong>Flexibilty</strong>
+              <h5>The Solutions That You Need Today</h5>
+              <p>
+                HRTech is adaptive to your organisations needs. You can pick the
+                solution that you need and add ore features as your team grows
+                and HR processes get more complex.
+              </p>
+            </span>
+
+            <span className="section3-containers">
+              <span>
+                <IoMdAnalytics />
+              </span>
+
+              <strong>Productivity</strong>
+              <h5>90% Increase In Planning Quality</h5>
+              <p>
+                Focus on developing your products and serices and let HRTech
+                deal with team management. We monitor their performance and
+                recomend on areas of improvement.
+              </p>
+            </span>
           </div>
         </section>
 

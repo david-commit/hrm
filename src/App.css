@@ -5,7 +5,7 @@
   --primary-color: #f8fafc;
   --secondary-color: #23d16b;
   --tertiary-color: #024751;
-  --four-color: #d3d3d3;
+  --four-color: rgb(128, 128, 128, 0.6);
 }
 
 * {
