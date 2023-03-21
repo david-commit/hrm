@@ -76,7 +76,11 @@ export default function Landing() {
             </h3>
           </div>
           <div id="landing-section4-container">
-            <div id="section4-container-1"></div>
+            <div id="section4-container-1">
+              <span id="container-1-header"></span>
+              <span id="container-1-body"></span>
+              <span id="container-1-foot"></span>
+            </div>
             <div id="section4-container-2">
               <h4>Create a conducive experience for your employees and you.</h4>
               <p>
@@ -84,8 +88,8 @@ export default function Landing() {
                 everything that needs to happen for all your new hires
               </p>
               <Link to="/signup">Learn More</Link>
-              <p>"
-                With everything explained onboarding our organisation was
+              <p>
+                " With everything explained onboarding our organisation was
                 impressive. HRTech went the extra mile by improving the product
                 regulary and providing technical support."
               </p>
