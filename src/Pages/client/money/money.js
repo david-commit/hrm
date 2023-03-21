@@ -3,6 +3,16 @@ import ClientBar from "../navbar/navbar";
 import "./money.css";
 
 export default function ClientMoney() {
+  let handleDownload = () => {
+    let fileUrl = "http://localhost:3000/workers.xlsx";
+
+    let link = document.createElement("a");
+    link.href = fileUrl;
+    link.download = "workers.xlsx";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
   return (
     <section id="client-cont">
       <ClientBar />
@@ -10,7 +20,7 @@ export default function ClientMoney() {
         <ClientHeader message="Add new employees to your organisation" />
         <div>
           <h2>Add new employee to your organisation</h2>
-          <button type="download">Download excel sheet</button>
+          <button onClick={handleDownload}>Download excel sheet</button>
         </div>
         <form>
           <h4>Mass add employees for your organisation.</h4>
@@ -32,7 +42,6 @@ export default function ClientMoney() {
           </div>
           <button type="submit">Register employee</button>
         </form>
-        
       </section>
     </section>
   );
