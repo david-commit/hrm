@@ -29,17 +29,17 @@ export default function ClientMoney() {
           </button>
         </div>
 
-        <form id="client-money-scetion2">
-          <h4>Mass add employees for your organisation.</h4>
+        <form id="client-money-section2">
+          <h4>Mass add employees to your organisation.</h4>
           <p>
             Download the excel sheet, fill out your employees details then
             upload it.
           </p>
-          <input type="file" />
+          <input type="file"  accept=".xlsx" className="file-upload-input" />
           <button type="submit">Add employees</button>
         </form>
 
-        <form>
+        <form id="client-money-section3">
           <h4>Add a single employee</h4>
           <div>
             <input type="text" placeholder="First name" />
