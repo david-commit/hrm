@@ -1,6 +1,7 @@
 import ClientHeader from "../home/header";
 import ClientBar from "../navbar/navbar";
 import "./money.css";
+import { FaDownload } from "react-icons/fa";
 
 export default function ClientMoney() {
   let handleDownload = () => {
@@ -13,16 +14,22 @@ export default function ClientMoney() {
     link.click();
     document.body.removeChild(link);
   };
+
   return (
     <section id="client-cont">
       <ClientBar />
       <section id="client-money">
         <ClientHeader message="Add new employees to your organisation" />
-        <div>
+
+        <div id="client-money-section1">
           <h2>Add new employee to your organisation</h2>
-          <button onClick={handleDownload}>Download excel sheet</button>
+          <button onClick={handleDownload}>
+            <FaDownload />
+            <p>Download Sheet</p>
+          </button>
         </div>
-        <form>
+
+        <form id="client-money-scetion2">
           <h4>Mass add employees for your organisation.</h4>
           <p>
             Download the excel sheet, fill out your employees details then
