@@ -68,10 +68,48 @@ export default function Landing() {
         </section>
 
         <section id="landing-section4">
-          <div id="landing-section4-header"></div>
-          <div id="landing-section4-container"></div>
-          <div id="landing-section4-footer"></div>
+          <div id="landing-section4-header">
+            <h3>
+              Empower your employees and
+              <br />
+              Automate HR process
+            </h3>
+          </div>
+          <div id="landing-section4-container">
+            <div id="section4-container-1"></div>
+            <div id="section4-container-2">
+              <h4>Create a conducive experience for your employees and you.</h4>
+              <p>
+                Make a great first impression by configuring and scheduling
+                everything that needs to happen for all your new hires
+              </p>
+              <Link to="/signup">Learn More</Link>
+              <p>"
+                With everything explained onboarding our organisation was
+                impressive. HRTech went the extra mile by improving the product
+                regulary and providing technical support."
+              </p>
+              <p>
+                <strong>Enock Mokua</strong> - Senior HR Manager
+              </p>
+            </div>
+          </div>
+          <div id="landing-section4-footer">
+            <span className="section4-footer-cont">
+              <p>Time Attendance</p>
+            </span>
+            <span className="section4-footer-cont">
+              <p>Payroll</p>
+            </span>
+            <span className="section4-footer-cont">
+              <p>Performance</p>
+            </span>
+            <span className="section4-footer-cont">
+              <p>Onboarding</p>
+            </span>
+          </div>
         </section>
+
         <section className="landing-container">
           <section id="landing-section5">
             <div id="landing-section5-header">
