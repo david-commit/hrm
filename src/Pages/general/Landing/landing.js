@@ -72,10 +72,41 @@ export default function Landing() {
           <div id="landing-section4-container"></div>
           <div id="landing-section4-footer"></div>
         </section>
+        <section className="landing-container">
+          <section id="landing-section5">
+            <div id="landing-section5-header">
+              <h3>Why most organisations partner with us.</h3>
+              <p>
+                Listen from our users own users reviews on why they prefer to
+                partner with us. We pride ourselves in providing excelent
+                srevices,read soe of the reviews left by world renowed
+                organizations.
+              </p>
+            </div>
+            <div id="landing-section5-cont">
+              <span className="review-cont">
+                <p className="quote"></p>
+                <p className="review-quote">
+                  It used to take one day to process payroll. Now I can
+                  automatically set payments and invoices tahnks to HR Tech Int.
+                </p>
+                <p className="review-foot">
+                  <strong>John Mose</strong>, CEO & Co-Founder
+                </p>
+              </span>
 
-        <section id="landing-section5">
-          <div id="landing-section5-header"></div>
-          <div id="landing-section5-cont"></div>
+              <span className="review-cont">
+                <p className="quote"></p>
+                <p className="review-quote">
+                  It used to take one day to process payroll. Now I can
+                  automatically set payments and invoices tahnks to HR Tech Int.
+                </p>
+                <p className="review-foot">
+                  <strong>John Mose</strong>, CEO & Co-Founder
+                </p>
+              </span>
+            </div>
+          </section>
         </section>
 
         <section id="landing-section6">
@@ -83,7 +114,7 @@ export default function Landing() {
           <p>
             Register your organnisation today on HR Tech and unleash the power
             of productivity in your organisation through proper people anagement
-            and automation of processes or book a demo with one of our CMO.
+            and automation of processes or book a demo with our CMO.
           </p>
 
           <span>
