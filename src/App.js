@@ -10,6 +10,8 @@ import ClientHome from "./Pages/client/home/home";
 import ClientMoney from "./Pages/client/money/money";
 import ClientEmployee from "./Pages/client/employee/employee";
 import ClientProfile from "./Pages/client/profile/profile";
+import Messages from "./Pages/client/notifications/message";
+import Notifications from "./Pages/client/notifications/notifs";
 
 function App() {
   return (
@@ -29,6 +31,8 @@ function App() {
           <Route path="money" element={<ClientMoney />} />
           <Route path="employee" element={<ClientEmployee />} />
           <Route path="profile" element={<ClientProfile />} />
+          <Route path="messages" element={<Messages />} />
+          <Route path="notifications" element={<Notifications />} />
         </Route>
 
         <Route path="/department">

@@ -2,9 +2,10 @@
 
 :root {
   /* --primary-color: #f2f2f2; */
-  --primary-color: #ffffff;
-  --secondary-color: #f1f8ff;
-  --tertiary-color: #030d94;
+  --primary-color: #f8fafc;
+  --secondary-color: #23d16b;
+  --tertiary-color: #024751;
+  --four-color: rgb(128, 128, 128, 0.6);
 }
 
 * {

@@ -2,13 +2,14 @@ import "./home.css";
 import { FaBell } from "react-icons/fa";
 import { FaComment } from "react-icons/fa";
 import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-export default function ClientHeader() {
+export default function ClientHeader(props) {
   return (
     <header id="client-home-header">
       <div>
         <h3>Good morning, Enock</h3>
-        <p>Hope you have a wonderful day</p>
+        <p>{props.message}</p>
       </div>
 
       <span>
@@ -17,13 +18,13 @@ export default function ClientHeader() {
           <input type="text" placeholder="Search" />
         </form>
 
-        <button className="notifications">
+        <Link to="/client/notifications" className="notifications">
           <FaBell />
-        </button>
+        </Link>
 
-        <button className="notifications">
+        <Link to="/client/messages" className="notifications">
           <FaComment />
-        </button>
+        </Link>
       </span>
     </header>
   );
