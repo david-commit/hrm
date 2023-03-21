@@ -23,7 +23,12 @@ export default function Login() {
           <button type="submit" onClick={handleLogin}>
             Login
           </button>
-          <Link to="reset">Forgot password?</Link>
+          <p to="reset">
+            Forgot password?<Link to="/reset"> Reset</Link>
+          </p>
+          <p to="/signup">
+            Dont have an account? <Link to="/signup">Signup</Link>
+          </p>
         </form>
       </main>
       <Footer />

@@ -23,7 +23,12 @@ export default function Signup() {
           <button type="submit" onClick={handleSignup}>
             Register
           </button>
-          <Link to="reset">Forgot password?</Link>
+          <p to="/reset">
+            Forgot password?<Link to="/reset"> Reset</Link>
+          </p>
+          <p to="/signup">
+            Already have an account? <Link to="/login">Login</Link>
+          </p>
         </form>
       </main>
       <Footer />
