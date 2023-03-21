@@ -23,14 +23,29 @@ export default function Landing() {
               Powering organisations through <br /> proper people management
             </h3>
             <p>
-              We provide a scalable human resource syste for your organisations
-              and automate salaries for you.
+              Our platform offers a scalable HR system that streamlines your
+              organization's processes, including automated salary management
+              for increased efficiency and accuracy.
             </p>
-            <button id="landing-signup" onClick={handleSignup}>
+            {/* <button id="landing-signup" onClick={handleSignup}>
               Register Organisation
-            </button>
+            </button> */}
+
+            <span id="landing-buttons">
+              <Link to="/signup" id="get-started" className="buttons">
+                Get Started
+              </Link>
+              <Link to="/signup" className="buttons" id="book-now">
+                Book Demo
+              </Link>
+            </span>
+
+            <p>Set up in less than 5 minutes no credit card required.</p>
+            <span id="landing-review"></span>
           </div>
-          <div id="landing-section-1-2"></div>
+          <div id="landing-section-1-2">
+            <div id="section-1-2-cont"></div>
+          </div>
         </div>
 
         <div id="landing-section2">

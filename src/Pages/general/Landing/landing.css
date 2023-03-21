@@ -20,13 +20,11 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border: thin solid black;
 }
 
 #landing-section1 > div {
   width: 50%;
   height: 100%;
-  border: thin solid black;
 }
 
 #landing-section-1-1 {
@@ -37,20 +35,79 @@
   justify-content: space-evenly;
 }
 
+#landing-section-1-1 > h3 {
+  font-size: 2rem;
+  text-align: left;
+  color: var(--tertiary-color);
+}
+
+#landing-section-1-1 > p {
+  width: 70%;
+  color: var(--four-color);
+}
+
+#landing-buttons {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#get-started {
+  background-color: var(--secondary-color);
+  border: thin solid var(--secondary-color);
+  color: var(--primary-color);
+}
+
+#book-now {
+  margin-left: 3vw;
+}
+
+.buttons {
+  width: 40%;
+  height: 100%;
+  border-radius: 4px;
+  font-size: 1rem;
+  border: thin solid var(--tertiary-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--tertiary-color);
+  justify-content: center;
+}
+
 #landing-signup {
   width: 60%;
   height: 6vh;
   margin-top: 1vh;
-  background-color: var(--tertiary-color);
-  color: var(--primary-color);
-  border: thin solid;
+  background-color: var(--secondary-color);
+  color: var(--tertiary-color);
+  border: thin solid transparent;
   font-size: 1rem;
   border-radius: 4px;
 }
 
+#landing-review {
+  width: 100%;
+  height: 20%;
+}
+
+#landing-section-1-2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+#section-1-2-cont {
+  width: 80%;
+  height: 90%;
+  background-color: var(--tertiary-color);
+  border-radius: 10px;
+}
 #landing-section2 {
   width: 80%;
-  border: thin solid black;
   height: 20vh;
   margin-top: 5vh;
   margin-bottom: 5vh;
@@ -68,7 +125,6 @@
 #our-partners {
   height: 80%;
   width: 100%;
-  border: thin solid black;
   display: flex;
   flex-direction: row;
   align-items: center;
