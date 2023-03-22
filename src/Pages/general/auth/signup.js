@@ -7,34 +7,33 @@ import Footer from "../../../Components/Static/footer/footer";
 
 export default function Signup() {
   let navigate = useNavigate();
-  let [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
+    name: "",
     email: "",
     password: "",
     password_confirmation: "",
   });
 
-  function handleChange(event) {
-    let { name, value } = event.target;
+  const handleChange = (event) => {
+    const { name, value } = event.target;
     setFormData((prevData) => ({
       ...prevData,
       [name]: value,
     }));
-  }
+  };
 
-  function handleSubmit(event) {
+  const handleSubmit = (event) => {
     event.preventDefault();
     fetch("http://localhost:3000/employers", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data);
-      })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
       .catch((error) => console.log(error));
-  }
-
+  };
+  
   function handleSignup() {
     navigate("/client/signup");
   }
@@ -48,25 +47,33 @@ export default function Signup() {
           <h4>Register Organisation</h4>
           <input
             type="text"
+            placeholder="Name"
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
+          />
+          <input
+            type="text"
             placeholder="Email Address"
+            name="email"
             value={formData.email}
             onChange={handleChange}
           />
           <input
-            type="text"
+            type="password"
             placeholder="Password"
+            name="password"
             value={formData.password}
             onChange={handleChange}
           />
           <input
-            type="text"
+            type="password"
             placeholder="Confirm Password"
+            name="password_confirmation"
             value={formData.password_confirmation}
             onChange={handleChange}
           />
-          <button type="submit" onClick={handleSignup}>
-            Register
-          </button>
+          <button type="submit">Register</button>
           <p to="/reset">
             Forgot password?<Link to="/reset"> Reset</Link>
           </p>
