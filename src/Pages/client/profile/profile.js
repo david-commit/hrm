@@ -64,7 +64,7 @@ export default function ClientProfile() {
           </form>
 
           <form>
-            <h3>Payment details</h3>
+            <h3>Salaries and Renumerations</h3>
             <span>
               <label>Set payment range for permanent employees.</label>
               <select>

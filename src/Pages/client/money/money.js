@@ -11,7 +11,7 @@ export default function ClientMoney() {
   });
 
   let handleDownload = () => {
-    let fileUrl = "http://localhost:3000/workers.xlsx";
+    let fileUrl = "/workers.xlsx";
     let link = document.createElement("a");
     link.href = fileUrl;
     link.download = "workers.xlsx";
@@ -33,7 +33,8 @@ export default function ClientMoney() {
       .then((response) => {
         if (response.ok) {
           // navigate to "/client/signup" if the response is ok
-          window.location.href = "/client/signup";
+          console.log("SUccess");
+          console.log(response)
         } else {
           response.json().then((data) => {
             console.log(data); // log any errors returned by the API
