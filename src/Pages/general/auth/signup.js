@@ -29,14 +29,18 @@ export default function Signup() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
     })
-      .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((response) => {
+        if (response.ok) {
+          console.log(response);
+          navigate("/client/signup");
+        } else {
+          response.json().then((data) => {
+            console.log(data.errors);
+          });
+        }
+      })
       .catch((error) => console.log(error));
   };
-  
-  function handleSignup() {
-    navigate("/client/signup");
-  }
 
   return (
     <>
@@ -48,6 +52,7 @@ export default function Signup() {
           <input
             type="text"
             placeholder="Name"
+            required
             name="name"
             value={formData.name}
             onChange={handleChange}
@@ -56,6 +61,7 @@ export default function Signup() {
             type="text"
             placeholder="Email Address"
             name="email"
+            required
             value={formData.email}
             onChange={handleChange}
           />
@@ -63,12 +69,14 @@ export default function Signup() {
             type="password"
             placeholder="Password"
             name="password"
+            required
             value={formData.password}
             onChange={handleChange}
           />
           <input
             type="password"
             placeholder="Confirm Password"
+            required
             name="password_confirmation"
             value={formData.password_confirmation}
             onChange={handleChange}
