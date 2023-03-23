@@ -10,8 +10,8 @@ export default function ClientProfile() {
         <ClientHeader message="Update your organisations details." />
 
         <section id="client-profile-1">
-          <form>
-            <h3>Update general details</h3>
+          <h3>Update general details</h3>
+          <form id="client-profile-1-1">
             <span>
               <input type="text" placeholder="Organisations name" />
               <input type="text" placeholder="Organisations number" />
@@ -46,6 +46,7 @@ export default function ClientProfile() {
                 </option>
               </select>
             </span>
+
             <button type="submit">Update</button>
           </form>
 
@@ -63,7 +64,7 @@ export default function ClientProfile() {
           </form>
 
           <form>
-            <h3>Payment details</h3>
+            <h3>Salaries and Renumerations</h3>
             <span>
               <label>Set payment range for permanent employees.</label>
               <select>
