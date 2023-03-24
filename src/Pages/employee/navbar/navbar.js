@@ -3,7 +3,7 @@ import './navbar.css';
 import { BiMoney } from 'react-icons/bi';
 import { AiOutlineHome } from 'react-icons/ai';
 import { FaUserCircle } from 'react-icons/fa';
-import { BsJournalBookmarkFill } from 'react-icons/bs';
+import { AiOutlineSchedule } from 'react-icons/ai';
 
 export default function EmployeeNavBar() {
   return (
@@ -26,7 +26,7 @@ export default function EmployeeNavBar() {
       </Link>
       <Link to='/employee/schedule' class='tooltip' id='employee-menu'>
         {' '}
-        <AiOutlineHome />
+        <AiOutlineSchedule />
         <span class='tooltiptext'>Schedule</span>
       </Link>
     </nav>
