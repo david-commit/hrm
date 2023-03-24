@@ -1,0 +1,42 @@
+.employee-edit-profile-container {
+  display: flex;
+}
+
+.employee-edit-profile-container:first-child {
+  height: 100vh;
+}
+
+.employee-edit-profile-body {
+  width: 95vw;
+}
+
+.employee-edit-profile {
+  margin: 2rem;
+}
+
+.employee-edit-profile > form > div {
+  display: flex;
+}
+
+.employee-edit-profile > form > div > section {
+ display: flex;
+ flex-direction: column;
+ margin: 0.8rem 2rem 1.5rem 0;
+}
+
+.employee-edit-profile > form > div > section > input {
+ margin-top: 4px;
+ padding: 0.3rem;
+ border-radius: 4px;
+ border: 1px solid #ccc;
+ font-size: 0.95rem;
+}
+
+.employee-edit-profile > form > button {
+ background-color: var(--tertiary-color);
+ border: 1px solid var(--tertiary-color);
+ color: white;
+ font-size: 0.95rem;
+ padding: 6px 12px;
+ border-radius: 6px;
+}
