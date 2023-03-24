@@ -109,21 +109,10 @@
 
 /* =========== NEW CODE ============ */
 .employee-home-main-container {
-  height: 99.5vh;
-  width: 99.5vw;
+  width: 100vw;
   display: flex;
 }
 
 .employee-home-body {
   width: 100%;
-}
-
-.employee-menubar {
-  border-bottom: 1px solid #ccc;
-  box-shadow: rgba(79, 86, 89, 0.2) 0px 8px 24px 0px;
-  height: 6rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 2rem;
 }
