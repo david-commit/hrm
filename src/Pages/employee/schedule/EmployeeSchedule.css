@@ -1,16 +1,16 @@
 .employee-schedule-container {
- display: flex;
+  display: flex;
 }
 
 .employee-schedule-body {
- width: 95vw;
+  width: 95vw;
 }
 .employee-schedule-container:first-child {
- height: 100vh;
+  height: 100vh;
 }
 
 .employee-schedule {
- margin: 2rem;
+  margin: 2rem;
 }
 
 .react-tabs {
@@ -55,7 +55,7 @@
 }
 
 .react-tabs__tab:focus:after {
-  content: "";
+  content: '';
   position: absolute;
   height: 5px;
   left: -4px;
@@ -74,4 +74,32 @@
 
 .mt--10 {
   margin-top: 10px;
+}
+
+.add-new-task-tab > form {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+.add-new-task-tab > form > label {
+ margin: 8px 0 3px ;
+}
+
+.add-new-task-tab > form > input,
+.add-new-task-tab > form > textarea {
+  padding: 4px 8px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  width: 45%;
+}
+
+.add-new-task-tab > form > button {
+ width: fit-content;
+ padding: 4px 10px;
+ margin-top: 1rem;
+ background-color: var(--tertiary-color);
+ color: white;
+ border: 1px solid var(--tertiary-color);
+ border-radius: 4px;
 }
