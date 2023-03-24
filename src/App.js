@@ -12,6 +12,8 @@ import ClientEmployee from "./Pages/client/employee/employee";
 import ClientProfile from "./Pages/client/profile/profile";
 import Messages from "./Pages/client/notifications/message";
 import Notifications from "./Pages/client/notifications/notifs";
+import EmployeeSchedule from './Pages/employee/schedule/EmployeeSchedule'
+import EmployeeEditProfile from "./Pages/employee/EmployeeEditProfile/EmployeeEditProfile";
 
 function App() {
   return (
@@ -46,6 +48,8 @@ function App() {
         <Route path="/employee">
           <Route path="home" element={<EmployeeHome />} />
           <Route path="money" element={<EmployeeMoney />} />
+          <Route path="schedule" element={<EmployeeSchedule />} />
+          <Route path="profile" element={<EmployeeEditProfile />} />
         </Route>
       </Routes>
     </BrowserRouter>
