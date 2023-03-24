@@ -1,16 +1,29 @@
 import './home.css';
 import EmployeeNavBar from '../navbar/navbar';
 import EmployeeProfile from '../profile/profile';
+import { FaSearch } from 'react-icons/fa';
 
 export default function EmployeeHome() {
   return (
     <>
-    <div className="employee-home-main-container">
+      <div className='employee-home-main-container'>
         <EmployeeNavBar />
-
-    </div>
-    {/* ===================================== */}
-      <section id='employee-cont'>
+        <section className='employee-home-body'>
+          <header className='employee-menubar'>
+            <p>
+              Hello there Enock Mokua <br />
+              Lets check your progress
+            </p>
+            <form id='header-search'>
+              <FaSearch id='search-icon' />
+              <input type='text' placeholder='Search' />
+            </form>
+          </header>
+        </section>
+        <EmployeeProfile />
+      </div>
+      {/* ===================================== */}
+      {/* <section id='employee-cont'>
         <EmployeeNavBar />
         <section id='employee-home'>
           <header id='employee-home-header'>
@@ -51,7 +64,7 @@ export default function EmployeeHome() {
           </div>
         </section>
         <EmployeeProfile />
-      </section>
+      </section> */}
     </>
   );
 }
