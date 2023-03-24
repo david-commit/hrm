@@ -1,0 +1,15 @@
+.employee-schedule-container {
+ display: flex;
+}
+
+.employee-schedule-body {
+ width: 95vw;
+}
+.employee-schedule-container:first-child {
+ height: 100vh;
+}
+
+.employee-schedule {
+ margin: 2rem;
+
+}
