@@ -106,3 +106,9 @@
   color: var(--primary-color);
   border-radius: 100px;
 }
+
+/* =========== NEW CODE ============ */
+.employee-home-main-container {
+  height: 99.5vh;
+  width: 99.5vw;
+}
