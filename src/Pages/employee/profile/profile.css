@@ -1,7 +1,6 @@
 .employee-side-profile {
-  /* flex-grow: 1;
-  width: fit-content; */
-  height: 100%;
+  flex-grow: 1;
+  height: 100vh;
   background-color: var(--tertiary-color);
 }
 
