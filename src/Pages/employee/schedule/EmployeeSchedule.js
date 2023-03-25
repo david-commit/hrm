@@ -102,7 +102,30 @@ const EmployeeSchedule = () => {
             <TabPanel className='leave-application-tab'>
               <h4>Leave Application</h4>
               <form onSubmit={handleLeaveApplication}>
-             
+              
+                <em style={{ fontSize: '0.8rem' }}>
+                  Employee can apply for a minimum of 1 day and maximum of 21
+                  days
+                </em>
+                <section className='leave-application-tab-section'>
+                  <label htmlFor='reson'>
+                    Reason for leave <span className='required-field'>*</span>
+                  </label>
+                  <textarea
+                    name='reason'
+                    rows='6'
+                    placeholder='Write your reason for leave application'
+                    value={reason}
+                    onChange={(e) => setReason(e.target.value)}
+                  ></textarea>
+                </section>
+                <button type='submit'>
+                  {loading ? (
+                    <BarLoader color='#36d7b7' />
+                  ) : (
+                    'Submit Application'
+                  )}
+                </button>
               </form>
             </TabPanel>
           </Tabs>
