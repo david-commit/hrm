@@ -15,6 +15,7 @@ import Notifications from "./Pages/client/notifications/notifs";
 import DepartmentHome from "./Pages/department/home/home";
 import DepartmentMembers from "./Pages/department/members/members";
 import { MemberDetail } from "./Pages/department/members/detail";
+import DepartmentApps from "./Pages/department/apps/app";
 
 function App() {
   return (
@@ -39,7 +40,8 @@ function App() {
         </Route>
 
         <Route path="/department">
-          <Route path="" element={<DepartmentHome />} />
+          <Route path="apps" element={<DepartmentApps />} />
+          <Route path="home" element={<DepartmentHome />} />
           <Route path="members" element={<DepartmentMembers />} />
           <Route path="members/:userId" element={<MemberDetail />} />
         </Route>

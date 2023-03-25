@@ -45,12 +45,23 @@
   display: grid;
   grid-template-columns: repeat(2, 50%);
 }
+
+#member-home-stats > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 #member-home-cont {
   width: 30%;
 }
 
-#member-home-cont > span {
-  width: 90%;
+#member-home-cont > button {
+  width: 80%;
+  height: 12%;
+  border: thin solid black;
+  font-size: 1rem;
 }
 
 span > textarea {
@@ -62,6 +73,7 @@ span > textarea {
 
 #member-home-cont > span {
   display: flex;
+  width: 90%;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;

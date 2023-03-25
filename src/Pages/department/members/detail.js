@@ -25,7 +25,10 @@ export function MemberDetail() {
 
         <section id="member-home">
           <div id="member-home-stats">
-            <span className="member-home-cont"></span>
+            <span className="member-home-cont">
+              <p>Days attended</p>
+              <span>25</span>
+            </span>
             <span className="member-home-cont"></span>
             <span className="member-home-cont"></span>
             <span className="member-home-cont"></span>
@@ -33,7 +36,6 @@ export function MemberDetail() {
 
           <div id="member-chart">
             <h3>Attendance records</h3>
-            
           </div>
 
           <form id="member-home-cont">
