@@ -19,6 +19,8 @@ const EmployeeSchedule = () => {
   const [reason, setReason] = useState('');
   const numberOfDays = Math.trunc(Math.ceil((endDate - startDate) / 86400000));
   const [loading, setLoading] = useState(false);
+  const [allTasks, setAllTasks] = useState([]);
+  const [allRequests, setAllRequests] = useState([]);
 
   const handleAddNewTask = (e) => {
     e.preventDefault();
@@ -69,7 +71,16 @@ const EmployeeSchedule = () => {
               <Tab>Apply for Leave</Tab>
             </TabList>
             <TabPanel>
-              <h4>Pending Tasks</h4>
+              <h4>Tasks to accomplish</h4>
+              <div className='employee-tasks-container'>
+                {allTasks.length ? (
+                  allTasks?.map((task) => {
+                    return <p>{task.task}</p>;
+                  })
+                ) : (
+                  <p>You don't have any tasks today!</p>
+                )}
+              </div>
             </TabPanel>
             <TabPanel className='add-new-task-tab'>
               <h4>Create New Task</h4>
@@ -98,7 +109,19 @@ const EmployeeSchedule = () => {
                 </button>
               </form>
             </TabPanel>
-            <TabPanel>Content of tab 3</TabPanel>
+            <TabPanel>
+              {' '}
+              <h4>Tasks to accomplish</h4>
+              <div className='employee-tasks-container'>
+                {allRequests.length ? (
+                  allRequests?.map((request) => {
+                    return <p>{request.request}</p>;
+                  })
+                ) : (
+                  <p>You don't have any pending requests today!</p>
+                )}
+              </div>
+            </TabPanel>
             <TabPanel className='leave-application-tab'>
               <h4>Leave Application</h4>
               <form onSubmit={handleLeaveApplication}>
