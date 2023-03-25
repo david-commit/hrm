@@ -7,7 +7,7 @@ import {
   TabList,
   Tab,
   TabPanel,
-} from 'https://cdn.skypack.dev/react-tabs@3.2.2';
+} from 'react-tabs';
 import DatePicker, { DateObject } from 'react-multi-date-picker';
 import BarLoader from 'react-spinners/BarLoader';
 

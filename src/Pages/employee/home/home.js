@@ -3,7 +3,6 @@ import EmployeeNavBar from '../navbar/navbar';
 import EmployeeProfile from '../profile/profile';
 import EmployeeHeader from '../header/EmployeeHeader';
 import { BiMoney } from 'react-icons/bi';
-import { AiOutlineHome } from 'react-icons/ai';
 import { FaUserCircle } from 'react-icons/fa';
 import { AiOutlineSchedule } from 'react-icons/ai';
 import { NavLink } from 'react-router-dom';
