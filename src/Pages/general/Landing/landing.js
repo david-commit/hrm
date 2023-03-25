@@ -48,7 +48,7 @@ export default function Landing() {
           </div>
         </div>
 
-        <div id="landing-section2">
+        {/* <div id="landing-section2">
           <h3>Our Partners</h3>
           <div id="our-partners">
             <span>
@@ -68,7 +68,7 @@ export default function Landing() {
               <p>Partner 1</p>
             </span>
           </div>
-        </div>
+        </div> */}
 
         <section id="landing-section3">
           <div id="landing-section3-header">
