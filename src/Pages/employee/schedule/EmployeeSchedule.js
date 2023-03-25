@@ -102,7 +102,53 @@ const EmployeeSchedule = () => {
             <TabPanel className='leave-application-tab'>
               <h4>Leave Application</h4>
               <form onSubmit={handleLeaveApplication}>
-              
+                <section>
+                  <div>
+                    <label htmlFor='start'>
+                      Start Date <span className='required-field'>*</span>
+                    </label>
+                    <br />
+                    <DatePicker
+                      id='date-picker'
+                      name='start'
+                      value={startDate}
+                      onChange={setStartDate}
+                      format={'DD/MM/YYYY'}
+                      minDate={new DateObject()}
+                      placeholder={new DateObject().format('DD/MM/YYYY')}
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor='end'>
+                      End Date <span className='required-field'>*</span>
+                    </label>
+                    <br />
+                    <DatePicker
+                      id='date-picker'
+                      name='end'
+                      value={endDate}
+                      onChange={setEndDate}
+                      format={'DD/MM/YYYY'}
+                      minDate={new DateObject().add(1, 'days')}
+                      maxDate={new DateObject().add(21, 'days')}
+                      placeholder={new DateObject()
+                        .add(1, 'days')
+                        .format('DD/MM/YYYY')}
+                      required
+                    />
+                  </div>
+                  <br />
+                  <p>
+                    {startDate == null || endDate == null
+                      ? 'Select Dates'
+                      : numberOfDays <= 0
+                      ? 'Invalid selection'
+                      : numberOfDays == 1
+                      ? numberOfDays + ' day'
+                      : numberOfDays + ' days'}
+                  </p>
+                </section>
                 <em style={{ fontSize: '0.8rem' }}>
                   Employee can apply for a minimum of 1 day and maximum of 21
                   days
