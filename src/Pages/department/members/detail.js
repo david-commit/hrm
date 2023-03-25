@@ -24,10 +24,40 @@ export function MemberDetail() {
         <DepartmentHeader message={`Welcome to ${user.name}'s profile.`} />
 
         <section id="member-home">
-          <span className="member-home-cont"></span>
-          <span className="member-home-cont"></span>
-          <span className="member-home-cont"></span>
-          <span className="member-home-cont"></span>
+          <div id="member-home-stats">
+            <span className="member-home-cont"></span>
+            <span className="member-home-cont"></span>
+            <span className="member-home-cont"></span>
+            <span className="member-home-cont"></span>
+          </div>
+
+          <div></div>
+
+          <form id="member-home-cont">
+            <h4>Report disciplinary case</h4>
+            <span>
+              <label for="disciplinary-cases">
+                Select type of disciplinary case:
+              </label>
+              <select id="disciplinary-cases" name="disciplinary-cases">
+                <option value="misconduct">Misconduct</option>
+                <option value="attendance">Attendance</option>
+                <option value="performance">Performance</option>
+                <option value="safety">Safety</option>
+                <option value="policy-violations">Policy Violations</option>
+                <option value="conflict-of-interest">
+                  Conflict of Interest
+                </option>
+                <option value="code-of-conduct">Code of Conduct</option>
+              </select>
+            </span>
+
+            <span>
+              <label>Detailed description of case</label>
+              <textarea type="text" placeholder="Enter description" />
+            </span>
+            <button type="submit">Submit</button>
+          </form>
         </section>
 
         <section id="member-body">
@@ -72,7 +102,6 @@ export function MemberDetail() {
             <button type="submit">Assign task</button>
           </form>
         </section>
-        <section id="member-foot"></section>
       </section>
     </section>
   );
