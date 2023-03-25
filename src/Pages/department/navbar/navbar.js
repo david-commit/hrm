@@ -10,7 +10,7 @@ export default function DepartmentNav() {
       <span id="department-nav-body">
         <Link to="">Apps</Link>
         <Link to="">Home</Link>
-        <Link to="">Members</Link>
+        <Link to="/department/members">Members</Link>
         <Link to="">Profile</Link>
       </span>
       <span id="department-nav-foot">Logout</span>

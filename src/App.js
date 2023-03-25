@@ -13,6 +13,7 @@ import ClientProfile from "./Pages/client/profile/profile";
 import Messages from "./Pages/client/notifications/message";
 import Notifications from "./Pages/client/notifications/notifs";
 import DepartmentHome from "./Pages/department/home/home";
+import DepartmentMembers from "./Pages/department/members/members";
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
 
         <Route path="/department">
           <Route path="" element={<DepartmentHome />} />
+          <Route path="members" element={<DepartmentMembers />} />
         </Route>
 
         <Route path="/supervisor">
