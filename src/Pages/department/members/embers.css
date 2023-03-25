@@ -1,0 +1,15 @@
+#department-member {
+  width: 95vw;
+  height: 100%;
+  border: thin solid black;
+}
+
+#member-search {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: thin solid black;
+}

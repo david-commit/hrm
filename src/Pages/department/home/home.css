@@ -1,0 +1,14 @@
+.department-cont {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#department-home {
+  width: 95vw;
+  height: 100%;
+  border: thin solid black;
+}

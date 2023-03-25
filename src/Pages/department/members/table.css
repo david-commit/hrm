@@ -1,0 +1,29 @@
+.table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  width: 20%;
+}
+
+table th {
+  background-color: aquamarine;
+  height: 4vh;
+  width: max-content;
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+td {
+  width: max-content;
+  font-weight: lighter;
+}
+
+tbody > * {
+  font-size: 0.9rem;
+}

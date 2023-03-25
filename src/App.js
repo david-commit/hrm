@@ -14,6 +14,9 @@ import Messages from "./Pages/client/notifications/message";
 import Notifications from "./Pages/client/notifications/notifs";
 import EmployeeSchedule from './Pages/employee/schedule/EmployeeSchedule'
 import EmployeeEditProfile from "./Pages/employee/EmployeeEditProfile/EmployeeEditProfile";
+import DepartmentHome from "./Pages/department/home/home";
+import DepartmentMembers from "./Pages/department/members/members";
+import { MemberDetail } from "./Pages/department/members/detail";
 
 function App() {
   return (
@@ -38,7 +41,9 @@ function App() {
         </Route>
 
         <Route path="/department">
-          <Route path="home" />
+          <Route path="" element={<DepartmentHome />} />
+          <Route path="members" element={<DepartmentMembers />} />
+          <Route path="members/:userId" element={<MemberDetail />} />
         </Route>
 
         <Route path="/supervisor">
