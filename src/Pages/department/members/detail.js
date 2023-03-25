@@ -31,7 +31,10 @@ export function MemberDetail() {
             <span className="member-home-cont"></span>
           </div>
 
-          <div></div>
+          <div id="member-chart">
+            <h3>Attendance records</h3>
+            
+          </div>
 
           <form id="member-home-cont">
             <h4>Report disciplinary case</h4>
