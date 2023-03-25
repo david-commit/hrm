@@ -14,6 +14,7 @@ import Messages from "./Pages/client/notifications/message";
 import Notifications from "./Pages/client/notifications/notifs";
 import DepartmentHome from "./Pages/department/home/home";
 import DepartmentMembers from "./Pages/department/members/members";
+import { MemberDetail } from "./Pages/department/members/detail";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/department">
           <Route path="" element={<DepartmentHome />} />
           <Route path="members" element={<DepartmentMembers />} />
+          <Route path="members/:userId" element={<MemberDetail />} />
         </Route>
 
         <Route path="/supervisor">
