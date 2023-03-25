@@ -1,0 +1,19 @@
+#department-header {
+  width: 100%;
+  height: 10%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#department-header > span {
+  width: 25%;
+  height: 100%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
