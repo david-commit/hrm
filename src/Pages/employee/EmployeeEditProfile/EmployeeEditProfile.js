@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './EmployeeEditProfile.css';
 import EmployeeHeader from '../header/EmployeeHeader';
 import EmployeeNavBar from '../navbar/navbar';
+import BarLoader from 'react-spinners/BarLoader';
 
 const EmployeeEditProfile = () => {
   const [name, setName] = useState('');
@@ -9,6 +10,7 @@ const EmployeeEditProfile = () => {
   const [phone, setPhone] = useState('');
   const [password, setPassword] = useState('')
   const [cPassword, setCPassword] = useState('')
+  const [loading, setLoading] = useState(false)
 
   const handleEmployeeUpdate = (e) => {
     e.preventDefault();
@@ -40,10 +42,14 @@ const EmployeeEditProfile = () => {
                 <input type='text' name='phone' placeholder='0712 345 678' />
               </section>
             </div>
-            <button type='submit'>Update Profile</button>
+            <button type='submit'>
+              {loading ? <BarLoader color='#36d7b7' /> : 'Update Profile'}
+            </button>
           </form>
         </section>
-        <hr style={{backgroundColor: '#ccc', width: '80%', marginLeft: '2rem'}} />
+        <hr
+          style={{ backgroundColor: '#ccc', width: '80%', marginLeft: '2rem' }}
+        />
         <section className='employee-edit-profile'>
           <h1>Change Password</h1>
           <form onSubmit={handleEmployeeUpdatePassword}>
@@ -54,11 +60,16 @@ const EmployeeEditProfile = () => {
               </section>
               <section>
                 <label htmlFor='email'>Confirm Password</label>
-                <input type='password' name='password' placeholder='Confirm Password' />
+                <input
+                  type='password'
+                  name='password'
+                  placeholder='Confirm Password'
+                />
               </section>
-             
             </div>
-            <button type='submit'>Change Password</button>
+            <button type='submit'>
+              {loading ? <BarLoader color='#36d7b7' /> : 'Change Password'}
+            </button>
           </form>
         </section>
       </section>
