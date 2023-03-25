@@ -1,0 +1,76 @@
+.member-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.member-cont > section {
+  border: thin solid black;
+  width: 100%;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+#member-home {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.member-home-cont {
+  height: 90%;
+  width: 20%;
+  border: thin solid black;
+}
+
+#member-body {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#member-body > * {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: thin solid black;
+}
+
+#member-body-objectives > span {
+  font-size: 1rem;
+  width: 90%;
+}
+
+#member-body-objectives > h4 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+#member-body-objectives > span {
+  width: 90%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+#member-body-objectives input {
+  height: 60%;
+}
+
+#member-body-objectives > button {
+  height: 10%;
+  width: 60%;
+  font-size: 1rem;
+}
