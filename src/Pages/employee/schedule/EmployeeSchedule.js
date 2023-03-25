@@ -154,7 +154,7 @@ const EmployeeSchedule = () => {
                       onChange={setEndDate}
                       format={'DD/MM/YYYY'}
                       minDate={new DateObject().add(1, 'days')}
-                      maxDate={new DateObject().add(21, 'days')}
+                      maxDate={new DateObject().add(20, 'days')}
                       placeholder={new DateObject()
                         .add(1, 'days')
                         .format('DD/MM/YYYY')}
