@@ -31,9 +31,25 @@ export function MemberDetail() {
         </section>
 
         <section id="member-body">
-          <div id="member-body-head"></div>
+          <div id="member-body-head">
+            <h3>{user.name}'s requests</h3>
+            <span className="member-requests">
+              <p>
+                Leave request <br />
+                10-2-2022 - 14-5-2023
+              </p>
+              <span>
+                <button>Allow</button>
+                <button>Deny</button>
+              </span>
+            </span>
+          </div>
           <div id="member-body-body">
-            
+            <h3>{user.name}'s upcoming tasks</h3>
+            <span className="schedule-cont">Clean the toilet</span>
+            <span className="schedule-cont">Clean the toilet</span>
+            <span className="schedule-cont">Clean the toilet</span>
+            <span className="schedule-cont">Clean the toilet</span>
           </div>
           <form id="member-body-objectives">
             <h4>Assign new task.</h4>

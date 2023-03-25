@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .member-cont > section {
   border: thin solid black;
   width: 100%;
-  margin-top: 1vh;
-  margin-bottom: 1vh;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
 }
 
 #member-home {
@@ -73,4 +73,66 @@
   height: 10%;
   width: 60%;
   font-size: 1rem;
+  border-radius: 4px;
+  border: thin solid black;
+}
+#member-body-body > h3 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+.schedule-cont {
+  width: 90%;
+  height: 20%;
+  border: thin solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.schedule-cont > * {
+  font-size: 1rem;
+}
+
+#member-body-head > h3 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.member-requests {
+  width: 90%;
+  height: 20%;
+  border: thin solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.member-requests > * {
+  font-size: 1rem;
+}
+
+.member-requests > p {
+  text-align: center;
+  width: 60%;
+}
+
+.member-requests > span {
+  width: 30%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.member-requests > span > button {
+  width: 90%;
+  height: 48%;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  border: thin solid black;
 }
