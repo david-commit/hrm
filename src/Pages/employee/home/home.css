@@ -116,3 +116,30 @@
 .employee-home-body {
   width: 100%;
 }
+
+.employee-home-cards {
+  margin: 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.employee-home-card {
+  background-color: #024751;
+  height: max-content;
+  width: 16rem;
+  padding: 2rem;
+  border-radius: 6px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.employee-home-card > a {
+  color: white;
+  text-decoration: none;
+  align-items: center;
+}
+
+.employee-tasks-container {
+  margin-top: 1rem;
+}
