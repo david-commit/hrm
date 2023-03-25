@@ -1,16 +1,20 @@
 .employee-schedule-container {
-  display: flex;
+ display: flex;
 }
 
 .employee-schedule-body {
-  width: 95vw;
+ width: 95vw;
 }
 .employee-schedule-container:first-child {
-  height: 100vh;
+ height: 100vh;
 }
 
 .employee-schedule {
-  margin: 2rem;
+ margin: 2rem;
+}
+
+.required-field {
+ color: red;
 }
 
 .react-tabs {
@@ -83,7 +87,7 @@
 }
 
 .add-new-task-tab > form > label {
- margin: 8px 0 3px ;
+  margin: 8px 0 3px;
 }
 
 .add-new-task-tab > form > input,
@@ -94,12 +98,43 @@
   width: 45%;
 }
 
-.add-new-task-tab > form > button {
- width: fit-content;
- padding: 4px 10px;
- margin-top: 1rem;
- background-color: var(--tertiary-color);
- color: white;
- border: 1px solid var(--tertiary-color);
- border-radius: 4px;
+.employee-schedule button {
+  width: fit-content;
+  padding: 4px 10px;
+  margin-top: 1rem;
+  background-color: var(--tertiary-color);
+  color: white;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 4px;
+}
+
+.leave-application-tab > form > section {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.leave-application-tab > form > section > div {
+  margin-right: 2rem;
+}
+
+.leave-application-tab > form > section > div > input,
+#date-picker {
+  margin-right: 2rem;
+  margin-top: 0.4rem;
+  width: 10rem;
+  padding: 1rem 6px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.leave-application-tab-section {
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.leave-application-tab-section > textarea {
+  width: 24rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 4px;
 }
