@@ -7,7 +7,7 @@ export default function DepartmentProfile() {
     <section className="department-cont">
       <DepartmentNav />
       <section id="department-home">
-        <DepartmentHeader />
+        <DepartmentHeader message={"Welcome to your profile."} />
       </section>
     </section>
   );

@@ -7,7 +7,9 @@ export default function DepartmentApps() {
     <section className="department-cont">
       <DepartmentNav />
       <section id="department-home">
-        <DepartmentHeader />
+        <DepartmentHeader
+          message={"Press any link to navigate to a new page"}
+        />
         <section id="department-apps">department apps</section>
       </section>
     </section>
