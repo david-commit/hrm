@@ -1,6 +1,8 @@
 import ClientBar from "../navbar/navbar";
 import React from "react";
 
+import Table from "../../department/members/table";
+
 import "./home.css";
 import ClientHeader from "./header";
 import { RiArrowUpSLine } from "react-icons/ri";
@@ -48,7 +50,6 @@ let data = [
 ];
 
 export default function ClientHome() {
-  
   function handleSearch() {
     let employerId = parseInt(localStorage.getItem("employerId"));
     fetch(`http://localhost:3000/employers/${employerId}`)
@@ -58,6 +59,7 @@ export default function ClientHome() {
       })
       .catch((error) => console.error(error));
   }
+
   const datal = {
     labels: ["Item 1", "Item 2"],
     datasets: [
@@ -75,6 +77,35 @@ export default function ClientHome() {
       },
     ],
   };
+
+  let departmentData = [
+    {
+      id: 1,
+      name: "Human Resources",
+      manager: "Jane Smith",
+      numOfEmployees: 23,
+    },
+    {
+      id: 2,
+      name: "Marketing",
+      manager: "John Doe",
+      numOfEmployees: 18,
+    },
+    {
+      id: 3,
+      name: "Finance",
+      manager: "Samantha Johnson",
+      numOfEmployees: 32,
+    },
+    {
+      id: 4,
+      name: "Engineering",
+      manager: "Alex Lee",
+      numOfEmployees: 45,
+    },
+  ];
+
+  let columns = ["name", "manager", "numOfEmployees"];
 
   return (
     <section id="client-cont">
@@ -173,7 +204,7 @@ export default function ClientHome() {
         </div>
 
         <div id="client-home-emps">
-          <div id="client-home-emps-header">
+          {/* <div id="client-home-emps-header">
             <h3>Employee Status</h3>
             <form id="client-home-emps-form">
               <FaSearch />
@@ -199,7 +230,9 @@ export default function ClientHome() {
             <span className="client-home-emps-missed">9</span>
             <span className="client-home-emps-gross">10900</span>
             <span className="client-home-emps-net">7000</span>
-          </div>
+          </div> */}
+
+          <Table data={departmentData} columns={columns} />
         </div>
       </section>
     </section>

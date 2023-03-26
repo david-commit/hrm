@@ -8,7 +8,7 @@ export default function DepartentDetail() {
       <ClientBar />
       <section id="client-home">
         <ClientHeader message="Here is an overview of the Engineering department" />
-        <section> This is the engineering department</section>
+        <section>This is the engineering department</section>
       </section>
     </section>
   );
