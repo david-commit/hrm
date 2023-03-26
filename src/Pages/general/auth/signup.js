@@ -31,8 +31,11 @@ export default function Signup() {
     })
       .then((response) => {
         if (response.ok) {
-          console.log(response);
-          navigate("/client/signup");
+          response.json().then((data) => {
+            localStorage.setItem("employerId", data.id);
+            console.log(data);
+            navigate("/client/signup");
+          });
         } else {
           response.json().then((data) => {
             console.log(data.errors);
@@ -51,7 +54,7 @@ export default function Signup() {
           <h4>Register Organisation</h4>
           <input
             type="text"
-            placeholder="Name"
+            placeholder="Organisation name"
             required
             name="name"
             value={formData.name}
