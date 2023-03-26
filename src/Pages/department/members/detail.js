@@ -13,13 +13,13 @@ const users = [
 
 export function MemberDetail() {
   let { userId } = useParams();
-
   const [attendanceData, setAttendanceData] = useState({
     timeIn: "",
     timeOut: "",
     reason: "",
   });
 
+  // create fnction to handle change
   function handleChange(event) {
     const { name, value } = event.target;
     setAttendanceData((prevState) => ({
@@ -28,35 +28,35 @@ export function MemberDetail() {
     }));
   }
 
+  // create fnction to calculate tie for user in
   function checkIn(timeIn) {
     const nineAm = new Date();
-    nineAm.setHours(9, 0, 0, 0); // set to 9:00am
-
-    const timeInDate = new Date(timeIn); // convert time in to a Date object
-    const timeDiffMs = timeInDate - nineAm; // subtract 9:00am from time in in milliseconds
-    const timeDiffHrs = timeDiffMs / (1000 * 60 * 60); // convert to hours
-
+    nineAm.setHours(9, 0, 0, 0);
+    const timeInDate = new Date(timeIn);
+    const timeDiffMs = timeInDate - nineAm;
+    const timeDiffHrs = timeDiffMs / (1000 * 60 * 60);
     return timeDiffHrs;
   }
 
+  // create fnction to calculate tie for user out
   function checkOut(timeOut) {
     const nineAm = new Date();
-    nineAm.setHours(17, 0, 0, 0); // set to 9:00am
-
-    const timeInDate = new Date(timeOut); // convert time in to a Date object
-    const timeDiffMs = timeInDate - nineAm; // subtract 9:00am from time in in milliseconds
-    const timeDiffHrs = timeDiffMs / (1000 * 60 * 60); // convert to hours
-
+    nineAm.setHours(17, 0, 0, 0);
+    const timeInDate = new Date(timeOut);
+    const timeDiffMs = timeInDate - nineAm;
+    const timeDiffHrs = timeDiffMs / (1000 * 60 * 60);
     return timeDiffHrs;
   }
 
+  // calculate function to post attendance data
   function handleAttendance(event) {
     event.preventDefault();
     attendanceData.department_id = "";
-    attendanceData.employee_id = userId;
+    attendanceData.employee_id = parseInt(userId);
     attendanceData.in_time = checkIn(attendanceData.timeIn);
     attendanceData.out_time = checkOut(attendanceData.timeOut);
 
+    console.log(attendanceData);
     fetch("/api/attendance", {
       method: "POST",
       headers: {
