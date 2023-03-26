@@ -41,7 +41,7 @@ export function MemberDetail() {
 
   function checkOut(timeOut) {
     const nineAm = new Date();
-    nineAm.setHours(9, 0, 0, 0); // set to 9:00am
+    nineAm.setHours(17, 0, 0, 0); // set to 9:00am
 
     const timeInDate = new Date(timeOut); // convert time in to a Date object
     const timeDiffMs = timeInDate - nineAm; // subtract 9:00am from time in in milliseconds
@@ -52,26 +52,29 @@ export function MemberDetail() {
 
   function handleAttendance(event) {
     event.preventDefault();
+    attendanceData.department_id = "";
+    attendanceData.employee_id = userId;
+    attendanceData.in_time = checkIn(attendanceData.timeIn);
+    attendanceData.out_time = checkOut(attendanceData.timeOut);
 
-    console.log(checkIn(attendanceData.timeIn));
-    // fetch("/api/attendance", {
-    //   method: "POST",
-    //   headers: {
-    //     "Content-Type": "application/json",
-    //   },
-    //   body: JSON.stringify(attendanceData),
-    // })
-    //   .then((response) => {
-    //     if (!response.ok) {
-    //       throw new Error("Network response was not ok");
-    //     }
-    //     console.log("Form data posted successfully");
-    //     checkLate(attendanceData.timeIn);
-    //     // other code here
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error posting form data:", error);
-    //   });
+    fetch("/api/attendance", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(attendanceData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        console.log("Form data posted successfully");
+        checkIn(attendanceData.timeIn);
+        // other code here
+      })
+      .catch((error) => {
+        console.error("Error posting form data:", error);
+      });
   }
 
   const user = users.find((u) => u.id === Number(userId));
