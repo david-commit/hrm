@@ -1,20 +1,21 @@
 .employee-schedule-container {
- display: flex;
+  display: flex;
 }
 
 .employee-schedule-body {
- width: 95vw;
+  width: 95vw;
+  margin-left: 5vw;
 }
 .employee-schedule-container:first-child {
- height: 100vh;
+  height: 100vh;
 }
 
 .employee-schedule {
- margin: 2rem;
+  margin: 2rem;
 }
 
 .required-field {
- color: red;
+  color: red;
 }
 
 .react-tabs {

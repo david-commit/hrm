@@ -2,11 +2,12 @@
   width: 100%;
 }
 #employee-money {
-  width: 100%;
+  width: 95vw;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  margin-left: 5vw;
 }
 
 #employee-money-header {
