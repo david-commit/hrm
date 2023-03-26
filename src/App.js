@@ -12,6 +12,8 @@ import ClientEmployee from "./Pages/client/employee/employee";
 import ClientProfile from "./Pages/client/profile/profile";
 import Messages from "./Pages/client/notifications/message";
 import Notifications from "./Pages/client/notifications/notifs";
+import EmployeeSchedule from './Pages/employee/schedule/EmployeeSchedule'
+import EmployeeEditProfile from "./Pages/employee/EmployeeEditProfile/EmployeeEditProfile";
 import DepartmentHome from "./Pages/department/home/home";
 import DepartmentMembers from "./Pages/department/members/members";
 import { MemberDetail } from "./Pages/department/members/detail";
@@ -58,6 +60,8 @@ function App() {
         <Route path="/employee">
           <Route path="home" element={<EmployeeHome />} />
           <Route path="money" element={<EmployeeMoney />} />
+          <Route path="schedule" element={<EmployeeSchedule />} />
+          <Route path="profile" element={<EmployeeEditProfile />} />
         </Route>
       </Routes>
     </BrowserRouter>

@@ -1,0 +1,141 @@
+.employee-schedule-container {
+  display: flex;
+}
+
+.employee-schedule-body {
+  width: 95vw;
+  margin-left: 5vw;
+}
+.employee-schedule-container:first-child {
+  height: 100vh;
+}
+
+.employee-schedule {
+  margin: 2rem;
+}
+
+.required-field {
+  color: red;
+}
+
+.react-tabs {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.react-tabs__tab-list {
+  border-bottom: 1px solid #aaa;
+  margin: 0 0 10px;
+  padding: 0;
+}
+
+.react-tabs__tab {
+  display: inline-block;
+  border: 1px solid transparent;
+  border-bottom: none;
+  bottom: -1px;
+  position: relative;
+  list-style: none;
+  padding: 6px 1rem;
+  cursor: pointer;
+  color: grey;
+  margin-bottom: 1rem;
+}
+
+.react-tabs__tab--selected {
+  background-color: #024751;
+  border-color: #aaa;
+  color: white;
+  border-radius: 5px 5px 0 0;
+}
+
+.react-tabs__tab--disabled {
+  color: GrayText;
+  cursor: default;
+}
+
+.react-tabs__tab:focus {
+  box-shadow: 0 0 5px hsl(208, 99%, 50%);
+  border-color: hsl(208, 99%, 50%);
+  outline: none;
+}
+
+.react-tabs__tab:focus:after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  left: -4px;
+  right: -4px;
+  bottom: -5px;
+  background: #fff;
+}
+
+.react-tabs__tab-panel {
+  display: none;
+}
+
+.react-tabs__tab-panel--selected {
+  display: block;
+}
+
+.mt--10 {
+  margin-top: 10px;
+}
+
+.add-new-task-tab > form {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem 0;
+}
+
+.add-new-task-tab > form > label {
+  margin: 8px 0 3px;
+}
+
+.add-new-task-tab > form > input,
+.add-new-task-tab > form > textarea {
+  padding: 4px 8px;
+  border: 1px solid grey;
+  border-radius: 4px;
+  width: 45%;
+}
+
+.employee-schedule button {
+  width: fit-content;
+  padding: 4px 10px;
+  margin-top: 1rem;
+  background-color: var(--tertiary-color);
+  color: white;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 4px;
+}
+
+.leave-application-tab > form > section {
+  display: flex;
+  margin-top: 0.5rem;
+}
+
+.leave-application-tab > form > section > div {
+  margin-right: 2rem;
+}
+
+.leave-application-tab > form > section > div > input,
+#date-picker {
+  margin-right: 2rem;
+  margin-top: 0.4rem;
+  width: 10rem;
+  padding: 1rem 6px;
+  border: 1px solid gray;
+  border-radius: 4px;
+}
+
+.leave-application-tab-section {
+  flex-direction: column;
+  padding-top: 1rem;
+}
+
+.leave-application-tab-section > textarea {
+  width: 24rem;
+  border: 1px solid gray;
+  border-radius: 4px;
+  padding: 4px;
+}

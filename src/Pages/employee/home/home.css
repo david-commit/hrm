@@ -1,5 +1,5 @@
 #employee-cont {
-  width: 99.5vw;
+  width: 94.5vw;
   border: thin solid black;
   height: 99.5vh;
   display: flex;
@@ -105,4 +105,42 @@
   background-color: var(--tertiary-color);
   color: var(--primary-color);
   border-radius: 100px;
+}
+
+/* =========== NEW CODE ============ */
+.employee-home-main-container {
+  width: 95vw;
+  display: flex;
+  margin-left: 5vw;
+}
+
+.employee-home-body {
+  width: 100%;
+}
+
+.employee-home-cards {
+  margin: 2rem;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.employee-home-card {
+  background-color: #024751;
+  height: max-content;
+  width: 16rem;
+  padding: 2rem;
+  border-radius: 6px;
+  margin-right: 2rem;
+  margin-bottom: 2rem;
+}
+
+.employee-home-card > a {
+  color: white;
+  text-decoration: none;
+  align-items: center;
+}
+
+.employee-tasks-container {
+  margin-top: 1rem;
 }
