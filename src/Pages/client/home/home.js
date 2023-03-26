@@ -1,4 +1,6 @@
 import ClientBar from "../navbar/navbar";
+import React from "react";
+
 import "./home.css";
 import ClientHeader from "./header";
 import { RiArrowUpSLine } from "react-icons/ri";
@@ -46,6 +48,16 @@ let data = [
 ];
 
 export default function ClientHome() {
+  
+  function handleSearch() {
+    let employerId = parseInt(localStorage.getItem("employerId"));
+    fetch(`http://localhost:3000/employers/${employerId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => console.error(error));
+  }
   const datal = {
     labels: ["Item 1", "Item 2"],
     datasets: [
@@ -93,6 +105,7 @@ export default function ClientHome() {
             </span>
           </span>
 
+          <button onClick={handleSearch}>Submit</button>
           <span className="client-home-employees">
             <p>Total attendance</p>
             <span>
