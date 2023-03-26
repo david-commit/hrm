@@ -8,6 +8,7 @@
   flex-direction: column;
   justify-content: flex-start;
   margin-left: 5vw;
+  margin-right: 20vw;
 }
 
 #employee-money-header {
@@ -103,13 +104,16 @@
 /* Aside */
 
 #employee-payroll {
-  width: 25%;
+  width: 20vw;
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
   background-color: var(--tertiary-color);
+  position: fixed;
+  right: 0;
+  top: 0;
 }
 
 #button-payslip {
