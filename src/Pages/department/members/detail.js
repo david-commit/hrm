@@ -57,7 +57,7 @@ export function MemberDetail() {
     attendanceData.out_time = checkOut(attendanceData.timeOut);
 
     console.log(attendanceData);
-    fetch("/api/attendance", {
+    fetch("http://localhost:3000/attendances", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
