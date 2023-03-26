@@ -19,6 +19,9 @@ import DepartmentApps from "./Pages/department/apps/app";
 import DepartmentProfile from "./Pages/department/profile/profile";
 
 function App() {
+  let employerId = localStorage.getItem("employerId");
+  console.group(employerId);
+  
   return (
     <BrowserRouter>
       <Routes>
