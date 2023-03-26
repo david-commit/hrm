@@ -24,10 +24,11 @@
     "react-spinners": "^0.13.8",
     "react-tabs": "^6.0.0",
     "victory": "^36.6.8",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "PORT=4000 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

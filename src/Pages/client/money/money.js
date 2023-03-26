@@ -34,7 +34,7 @@ export default function ClientMoney() {
         if (response.ok) {
           // navigate to "/client/signup" if the response is ok
           console.log("SUccess");
-          console.log(response)
+          console.log(response);
         } else {
           response.json().then((data) => {
             console.log(data); // log any errors returned by the API
@@ -75,8 +75,9 @@ export default function ClientMoney() {
           <button type="submit">Add employees</button>
         </form>
 
+        <h4>Add a single employee</h4>
+        
         <form id="client-money-section3" onSubmit={handleEmployeeData}>
-          <h4>Add a single employee</h4>
           <div>
             <input
               ype="text"

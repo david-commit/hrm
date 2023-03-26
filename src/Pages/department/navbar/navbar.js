@@ -8,10 +8,10 @@ export default function DepartmentNav() {
         <Link to="/">HRTech Int.</Link>
       </span>
       <span id="department-nav-body">
-        <Link to="">Apps</Link>
-        <Link to="">Home</Link>
+        <Link to="/department/apps">Apps</Link>
+        <Link to="/department/home">Home</Link>
         <Link to="/department/members">Members</Link>
-        <Link to="">Profile</Link>
+        <Link to="/department/profile">Profile</Link>
       </span>
       <span id="department-nav-foot">Logout</span>
     </aside>

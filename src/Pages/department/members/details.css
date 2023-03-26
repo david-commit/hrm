@@ -1,0 +1,222 @@
+.member-cont {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; */
+  overflow-y: scroll;
+}
+
+.member-cont > section {
+  border: thin solid black;
+  width: 100%;
+}
+
+#member-home {
+  height: 40%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#member-home > * {
+  border: thin solid black;
+  height: 100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#member-chart {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#member-chart > h3 {
+  font-weight: lighter;
+}
+
+#member-home-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+
+#member-home-stats > span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#member-home-cont {
+  width: 30%;
+}
+
+#member-home-cont > button {
+  width: 80%;
+  height: 12%;
+  border: thin solid black;
+  font-size: 1rem;
+}
+
+span > textarea {
+  height: 15vh;
+  width: 100%;
+  border: thin solid black;
+  padding: 4px;
+}
+
+#member-home-cont > span {
+  display: flex;
+  width: 90%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+textarea:focus {
+  outline: thin solid black;
+}
+
+.member-home-cont {
+  height: 100%;
+  border: thin solid black;
+}
+
+#member-body {
+  width: 100%;
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#member-body > * {
+  width: 33%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  border: thin solid black;
+}
+
+#member-body-objectives > span {
+  font-size: 1rem;
+  width: 90%;
+}
+
+#member-body-objectives > h4 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+#member-body-objectives > span {
+  width: 90%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+}
+
+#member-body-objectives input {
+  height: 60%;
+}
+
+#member-body-objectives > button {
+  height: 10%;
+  width: 60%;
+  font-size: 1rem;
+  border-radius: 4px;
+  border: thin solid black;
+}
+#member-body-body > h3 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+.schedule-cont {
+  width: 90%;
+  height: 20%;
+  border: thin solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.schedule-cont > * {
+  font-size: 1rem;
+}
+
+#member-body-head > h3 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+.member-requests {
+  width: 90%;
+  height: 20%;
+  border: thin solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.member-requests > * {
+  font-size: 1rem;
+}
+
+.member-requests > p {
+  text-align: center;
+  width: 60%;
+}
+
+.member-requests > span {
+  width: 30%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.member-requests > span > button {
+  width: 90%;
+  height: 48%;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  border: thin solid black;
+}
+
+#member-attendance {
+  height: 50%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#member-attendance > h3 {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+#member-attendance > button {
+  height: 12%;
+  width: 20%;
+  border: thin solid black;
+  border-radius: 4px;
+}
+

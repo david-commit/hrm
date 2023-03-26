@@ -1,5 +1,9 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
+
 import "./details.css";
+import DepartmentHeader from "../header/header";
+import DepartmentNav from "../navbar/navbar";
 
 const users = [
   { id: 1, name: "John Doe", email: "john.doe@example.com" },
@@ -9,19 +13,201 @@ const users = [
 
 export function MemberDetail() {
   let { userId } = useParams();
+  const [attendanceData, setAttendanceData] = useState({
+    timeIn: "",
+    timeOut: "",
+    reason: "",
+  });
 
-  // Find the user by ID
+  // create fnction to handle change
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setAttendanceData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  }
+
+  // create fnction to calculate tie for user in
+  function checkIn(timeIn) {
+    const nineAm = new Date();
+    nineAm.setHours(9, 0, 0, 0);
+    const timeInDate = new Date(timeIn);
+    const timeDiffMs = timeInDate - nineAm;
+    const timeDiffHrs = timeDiffMs / (1000 * 60 * 60);
+    return timeDiffHrs;
+  }
+
+  // create fnction to calculate tie for user out
+  function checkOut(timeOut) {
+    const nineAm = new Date();
+    nineAm.setHours(17, 0, 0, 0);
+    const timeInDate = new Date(timeOut);
+    const timeDiffMs = timeInDate - nineAm;
+    const timeDiffHrs = timeDiffMs / (1000 * 60 * 60);
+    return timeDiffHrs;
+  }
+
+  // calculate function to post attendance data
+  function handleAttendance(event) {
+    event.preventDefault();
+    attendanceData.department_id = "";
+    attendanceData.employee_id = parseInt(userId);
+    attendanceData.in_time = checkIn(attendanceData.timeIn);
+    attendanceData.out_time = checkOut(attendanceData.timeOut);
+
+    console.log(attendanceData);
+    fetch("/api/attendance", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(attendanceData),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok");
+        }
+        console.log("Form data posted successfully");
+        checkIn(attendanceData.timeIn);
+        // other code here
+      })
+      .catch((error) => {
+        console.error("Error posting form data:", error);
+      });
+  }
+
   const user = users.find((u) => u.id === Number(userId));
-
   if (!user) {
     return <div>User not found</div>;
   }
 
   return (
-    <section>
-      <h1>User Detail</h1>
-      <p>Name: {user.name}</p>
-      <p>Email: {user.email}</p>
+    <section className="department-cont">
+      <DepartmentNav />
+      <section id="department-member" className="member-cont">
+        <DepartmentHeader message={`Welcome to ${user.name}'s profile.`} />
+
+        <section id="member-home">
+          <div id="member-home-stats">
+            <span className="member-home-cont">
+              <p>Days attended</p>
+              <span>25</span>
+            </span>
+            <span className="member-home-cont"></span>
+            <span className="member-home-cont"></span>
+            <span className="member-home-cont"></span>
+          </div>
+
+          <div id="member-chart">
+            <h3>Attendance records</h3>
+          </div>
+
+          <form id="member-home-cont">
+            <h4>Report disciplinary case</h4>
+            <span>
+              <label for="disciplinary-cases">
+                Select type of disciplinary case:
+              </label>
+              <select id="disciplinary-cases" name="disciplinary-cases">
+                <option value="misconduct">Misconduct</option>
+                <option value="attendance">Attendance</option>
+                <option value="performance">Performance</option>
+                <option value="safety">Safety</option>
+                <option value="policy-violations">Policy Violations</option>
+                <option value="conflict-of-interest">
+                  Conflict of Interest
+                </option>
+                <option value="code-of-conduct">Code of Conduct</option>
+              </select>
+            </span>
+
+            <span>
+              <label>Detailed description of case</label>
+              <textarea type="text" placeholder="Enter description" />
+            </span>
+            <button type="submit">Submit</button>
+          </form>
+        </section>
+
+        <section id="member-body">
+          <div id="member-body-head">
+            <h3>{user.name}'s requests</h3>
+            <span className="member-requests">
+              <p>
+                Leave request <br />
+                10-2-2022 - 14-5-2023
+              </p>
+              <span>
+                <button>Allow</button>
+                <button>Deny</button>
+              </span>
+            </span>
+          </div>
+          <div id="member-body-body">
+            <h3>{user.name}'s upcoming tasks</h3>
+            <span className="schedule-cont">Clean the toilet</span>
+            <span className="schedule-cont">Clean the toilet</span>
+            <span className="schedule-cont">Clean the toilet</span>
+            <span className="schedule-cont">Clean the toilet</span>
+          </div>
+          <form id="member-body-objectives">
+            <h4>Assign new task.</h4>
+
+            <span>
+              <label>Enter task name</label>
+              <input type="text" placeholder="Task name" />
+            </span>
+
+            <span>
+              <label>Enter task description</label>
+              <input text="text" placeholder="Task description" />
+            </span>
+
+            <span>
+              <label>Enter deadline</label>
+              <input type="calendar" placeholder="Datetime" />
+            </span>
+
+            <button type="submit">Assign task</button>
+          </form>
+        </section>
+
+        <form id="member-attendance" onSubmit={handleAttendance}>
+          <h3>Register Attendance</h3>
+          <span>
+            <label>Time in:</label>
+            <input
+              type="datetime-local"
+              name="timeIn"
+              value={attendanceData.timeIn}
+              onChange={handleChange}
+            />
+          </span>
+
+          <span>
+            <label>Time out:</label>
+            <input
+              type="datetime-local"
+              name="timeOut"
+              value={attendanceData.timeOut}
+              onChange={handleChange}
+            />
+          </span>
+
+          <span>
+            <label>Reason:</label>
+            <textarea
+              type="text"
+              name="reason"
+              value={attendanceData.reason}
+              onChange={handleChange}
+            />
+          </span>
+
+          <button type="submit">Register</button>
+        </form>
+      </section>
     </section>
   );
 }

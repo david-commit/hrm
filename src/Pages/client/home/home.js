@@ -1,4 +1,8 @@
 import ClientBar from "../navbar/navbar";
+import React from "react";
+
+import Table from "../../department/members/table";
+
 import "./home.css";
 import ClientHeader from "./header";
 import { RiArrowUpSLine } from "react-icons/ri";
@@ -17,6 +21,7 @@ import {
 } from "chart.js";
 
 import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 ChartJS.register(
   CategoryScale,
@@ -46,6 +51,16 @@ let data = [
 ];
 
 export default function ClientHome() {
+  function handleSearch() {
+    let employerId = parseInt(localStorage.getItem("employerId"));
+    fetch(`http://localhost:3000/employers/${employerId}`)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => console.error(error));
+  }
+
   const datal = {
     labels: ["Item 1", "Item 2"],
     datasets: [
@@ -63,6 +78,14 @@ export default function ClientHome() {
       },
     ],
   };
+
+  const users = [
+    { id: 1, name: "John Doe", email: "john.doe@example.com" },
+    { id: 2, name: "Jane Smith", email: "jane.smith@example.com" },
+    { id: 3, name: "Bob Johnson", email: "bob.johnson@example.com" },
+  ];
+
+  // <Table data={departmentData} columns={columns} />
 
   return (
     <section id="client-cont">
@@ -93,6 +116,7 @@ export default function ClientHome() {
             </span>
           </span>
 
+          <button onClick={handleSearch}>Submit</button>
           <span className="client-home-employees">
             <p>Total attendance</p>
             <span>
@@ -178,7 +202,10 @@ export default function ClientHome() {
             <span className="client-home-emps-net">Total Net Earnings</span>
           </div>
 
-          <div className="client-home-emps-child">
+          <Link
+            to={`/client/home/employees/${users.id}`}
+            className="client-home-emps-child"
+          >
             <span className="client-home-emps-number">22</span>
             <span className="client-home-emps-name">Enock MOkua</span>
             <span className="client-home-emps-sex">Male</span>
@@ -186,7 +213,7 @@ export default function ClientHome() {
             <span className="client-home-emps-missed">9</span>
             <span className="client-home-emps-gross">10900</span>
             <span className="client-home-emps-net">7000</span>
-          </div>
+          </Link>
         </div>
       </section>
     </section>

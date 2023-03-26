@@ -1,0 +1,39 @@
+#department-apps {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#department-apps > div {
+  width: 15%;
+  height: 25%;
+  border: thin solid black;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1vw;
+  margin-right: 1vw;
+}
+
+.dept-apps-cont > * {
+  width: 100%;
+  border: thin solid black;
+}
+
+.dept-apps-cont > span {
+  height: 70%;
+}
+
+.dept-apps-cont > a {
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
