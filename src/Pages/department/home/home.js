@@ -7,7 +7,7 @@ export default function DepartmentHome() {
     <section className="department-cont">
       <DepartmentNav />
       <section id="department-home">
-        <DepartmentHeader />
+        <DepartmentHeader message={"Here is an overview of your department"} />
       </section>
     </section>
   );

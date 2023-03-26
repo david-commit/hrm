@@ -11,9 +11,9 @@
 #department-header > span {
   width: max-content;
   height: 100%;
-  border: thin solid black;
   display: flex;
   flex-direction: column;
+  margin-left: 2vw;
   align-items: center;
   justify-content: space-evenly;
 }
