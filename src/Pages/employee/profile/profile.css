@@ -1,5 +1,29 @@
-#employee-side-profile {
-  width: 25vw;
-  height: 100%;
+.employee-side-profile {
+  flex-grow: 1;
+  height: 100vh;
   background-color: var(--tertiary-color);
+}
+
+.user-profile-data {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  margin: 4rem auto;
+  color: white;
+  text-align: center;
+}
+
+.user-profile-data > img {
+  width: 45%;
+  padding-bottom: 1rem;
+  margin: auto;
+}
+
+.user-profile-data > span {
+  margin-top: 0.6rem;
+}
+
+#employee-profile-key {
+  font-weight: 600;
+  padding-right: 0.5rem;
 }
