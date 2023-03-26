@@ -1,4 +1,6 @@
 import { useParams } from "react-router-dom";
+import { useState } from "react";
+
 import "./details.css";
 import DepartmentHeader from "../header/header";
 import DepartmentNav from "../navbar/navbar";
@@ -11,6 +13,26 @@ const users = [
 
 export function MemberDetail() {
   let { userId } = useParams();
+
+  const [attendanceData, setAttendanceData] = useState({
+    timeIn: "",
+    timeOut: "",
+    reason: "",
+  });
+
+  function handleChange(event) {
+    const { name, value } = event.target;
+    setAttendanceData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  }
+
+  function handleAttendance(event) {
+    event.preventDefault();
+    console.log("Form data:", attendanceData);
+    // other code here
+  }
 
   const user = users.find((u) => u.id === Number(userId));
   if (!user) {
@@ -107,6 +129,41 @@ export function MemberDetail() {
             <button type="submit">Assign task</button>
           </form>
         </section>
+
+        <form id="member-attendance" onSubmit={handleAttendance}>
+          <h3>Register Attendance</h3>
+          <span>
+            <label>Time in:</label>
+            <input
+              type="datetime-local"
+              name="timeIn"
+              value={attendanceData.timeIn}
+              onChange={handleChange}
+            />
+          </span>
+
+          <span>
+            <label>Time out:</label>
+            <input
+              type="datetime-local"
+              name="timeOut"
+              value={attendanceData.timeOut}
+              onChange={handleChange}
+            />
+          </span>
+
+          <span>
+            <label>Reason:</label>
+            <textarea
+              type="text"
+              name="reason"
+              value={attendanceData.reason}
+              onChange={handleChange}
+            />
+          </span>
+
+          <button type="submit">Register</button>
+        </form>
       </section>
     </section>
   );

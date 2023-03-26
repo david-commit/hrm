@@ -21,6 +21,7 @@ import {
 } from "chart.js";
 
 import { FaSearch } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 ChartJS.register(
   CategoryScale,
@@ -78,34 +79,13 @@ export default function ClientHome() {
     ],
   };
 
-  let departmentData = [
-    {
-      id: 1,
-      name: "Human Resources",
-      manager: "Jane Smith",
-      numOfEmployees: 23,
-    },
-    {
-      id: 2,
-      name: "Marketing",
-      manager: "John Doe",
-      numOfEmployees: 18,
-    },
-    {
-      id: 3,
-      name: "Finance",
-      manager: "Samantha Johnson",
-      numOfEmployees: 32,
-    },
-    {
-      id: 4,
-      name: "Engineering",
-      manager: "Alex Lee",
-      numOfEmployees: 45,
-    },
+  const users = [
+    { id: 1, name: "John Doe", email: "john.doe@example.com" },
+    { id: 2, name: "Jane Smith", email: "jane.smith@example.com" },
+    { id: 3, name: "Bob Johnson", email: "bob.johnson@example.com" },
   ];
 
-  let columns = ["name", "manager", "numOfEmployees"];
+  // <Table data={departmentData} columns={columns} />
 
   return (
     <section id="client-cont">
@@ -204,7 +184,7 @@ export default function ClientHome() {
         </div>
 
         <div id="client-home-emps">
-          {/* <div id="client-home-emps-header">
+          <div id="client-home-emps-header">
             <h3>Employee Status</h3>
             <form id="client-home-emps-form">
               <FaSearch />
@@ -222,7 +202,10 @@ export default function ClientHome() {
             <span className="client-home-emps-net">Total Net Earnings</span>
           </div>
 
-          <div className="client-home-emps-child">
+          <Link
+            to={`/client/home/employees/${users.id}`}
+            className="client-home-emps-child"
+          >
             <span className="client-home-emps-number">22</span>
             <span className="client-home-emps-name">Enock MOkua</span>
             <span className="client-home-emps-sex">Male</span>
@@ -230,9 +213,7 @@ export default function ClientHome() {
             <span className="client-home-emps-missed">9</span>
             <span className="client-home-emps-gross">10900</span>
             <span className="client-home-emps-net">7000</span>
-          </div> */}
-
-          <Table data={departmentData} columns={columns} />
+          </Link>
         </div>
       </section>
     </section>
