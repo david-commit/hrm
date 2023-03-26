@@ -11,7 +11,11 @@ const EmployeeEditProfile = () => {
   const [password, setPassword] = useState('')
   const [cPassword, setCPassword] = useState('')
   const [loading, setLoading] = useState(false)
-
+  const [nssf, setNssf] = useState('')
+  const [kra, setKra] = useState('')
+  const [pwd, setPwd] = useState('')
+  const [nhif, setNhif] = useState('')
+  
   const handleEmployeeUpdate = (e) => {
     e.preventDefault();
   };
@@ -44,6 +48,47 @@ const EmployeeEditProfile = () => {
             </div>
             <button type='submit'>
               {loading ? <BarLoader color='#36d7b7' /> : 'Update Profile'}
+            </button>
+          </form>
+        </section>
+        <hr
+          style={{ backgroundColor: '#ccc', width: '80%', marginLeft: '2rem' }}
+        />
+        <section className='employee-edit-profile'>
+          <h1>Change Work Details</h1>
+          <form onSubmit={handleEmployeeUpdatePassword}>
+            <div>
+              <section>
+                <label htmlFor='nhif'>NHIF Member No.</label>
+                <input type='text' name='nhif' placeholder='Member No.' />
+              </section>
+              <section>
+                <label htmlFor='nssf'>NSSF No.</label>
+                <input
+                  type='text'
+                  name='nssf'
+                  placeholder='NSSF No.'
+                />
+              </section>
+              <section>
+                <label htmlFor='kra'>KRA Pin No.</label>
+                <input
+                  type='text'
+                  name='kra'
+                  placeholder='Eg A1244521582'
+                />
+              </section>
+              <section>
+                <label htmlFor='nssf'>PWD No. (If not applicable, type N/A)</label>
+                <input
+                  type='text'
+                  name='nssf'
+                  placeholder='PWD No.'
+                />
+              </section>
+            </div>
+            <button type='submit'>
+              {loading ? <BarLoader color='#36d7b7' /> : 'Change Password'}
             </button>
           </form>
         </section>
