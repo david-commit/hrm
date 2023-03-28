@@ -53,11 +53,12 @@ export function MemberDetail() {
     event.preventDefault();
     attendanceData.department_id = "";
     attendanceData.employee_id = parseInt(userId);
-    attendanceData.in_time = checkIn(attendanceData.timeIn);
-    attendanceData.out_time = checkOut(attendanceData.timeOut);
+    attendanceData.timeIn = checkIn(attendanceData.timeIn);
+    attendanceData.timeOut = checkOut(attendanceData.timeOut);
+    attendanceData.date = new Date().toLocaleDateString();
 
     console.log(attendanceData);
-    fetch("/api/attendance", {
+    fetch("http://localhost:3000/attendances", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
