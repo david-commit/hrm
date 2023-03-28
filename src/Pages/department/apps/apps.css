@@ -10,7 +10,6 @@
 #department-apps > div {
   width: 15%;
   height: 25%;
-  border: thin solid black;
   border-radius: 4px;
   display: flex;
   flex-direction: column;

@@ -7,8 +7,13 @@
   justify-content: space-between;
 }
 
+.department-member-cont {
+    margin-left: 5vw;
+}
+
 #department-home {
   width: 95vw;
   height: 100%;
   border: thin solid black;
+  margin-left: 5vw;
 }
