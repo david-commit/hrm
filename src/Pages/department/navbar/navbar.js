@@ -9,7 +9,9 @@ export default function DepartmentNav() {
   return (
     <aside id='department-nav'>
       <span id='department-nav-head'>
-        <Link to='/'>HRTech Int.</Link>
+        <Link to='/' id='department-nav-header'>
+          HRTech Int.
+        </Link>
       </span>
       <span id='department-nav-body'>
         <Link to='/department/apps' class='tooltip' id='department-menu'>
@@ -29,7 +31,11 @@ export default function DepartmentNav() {
           <span class='tooltiptext'>Profile</span>
         </Link>
       </span>
-      <span id='department-nav-foot'>Logout</span>
+      <span>
+        <Link to='/' id='department-nav-foot'>
+          Logout
+        </Link>
+      </span>
     </aside>
   );
 }

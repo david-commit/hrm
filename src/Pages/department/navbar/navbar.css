@@ -58,3 +58,8 @@
 .tooltip:hover .tooltiptext {
   visibility: visible;
 }
+
+#department-nav-header, 
+#department-nav-foot {
+  color: white;
+}
