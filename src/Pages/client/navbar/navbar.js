@@ -44,11 +44,12 @@ export default function ClientBar() {
         </Link> */}
       </span>
 
-      <span id='client-bar-foot'>
-        <Link to='/'>
+        <Link to='/' class='tooltip' id='employee-menu'>
+          {' '}
           <RiLogoutBoxRLine />
+          <span class='tooltiptext'>Logout</span>
+          <br />
         </Link>
-      </span>
     </aside>
   );
 }
