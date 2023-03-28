@@ -17,21 +17,21 @@ export default function DepartmentApps() {
         <section id='department-apps'>
           <div className='dept-apps-cont'>
             <span>
-              <AiOutlineHome />
+              <AiOutlineHome id='department-apps-icon' />
             </span>
             <Link to='/department/home'>Home</Link>
           </div>
 
           <div className='dept-apps-cont'>
             <span>
-              <HiOutlineUsers />
+              <HiOutlineUsers id='department-apps-icon' />
             </span>
             <Link to='/department/members'>Members</Link>
           </div>
 
           <div className='dept-apps-cont'>
             <span>
-              <FaUserCircle />
+              <FaUserCircle id='department-apps-icon' />
             </span>
             <Link to='/department/profile'>Profile</Link>
           </div>
