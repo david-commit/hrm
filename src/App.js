@@ -19,6 +19,7 @@ import DepartmentMembers from "./Pages/department/members/members";
 import { MemberDetail } from "./Pages/department/members/detail";
 import DepartmentApps from "./Pages/department/apps/app";
 import DepartmentProfile from "./Pages/department/profile/profile";
+import ClientApprovals from './Pages/client/ClientApprovals/ClientApprovals'
 
 function App() {
   let employerId = localStorage.getItem("employerId");
@@ -43,6 +44,7 @@ function App() {
           <Route path="profile" element={<ClientProfile />} />
           <Route path="messages" element={<Messages />} />
           <Route path="notifications" element={<Notifications />} />
+          <Route path="approvals" element={<ClientApprovals />} />
         </Route>
 
         <Route path="/department">
