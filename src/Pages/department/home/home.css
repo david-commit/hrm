@@ -14,6 +14,32 @@
 #department-home {
   width: 95vw;
   height: 100%;
-  border: thin solid black;
   margin-left: 5vw;
+}
+
+.department-home-body {
+  padding: 2rem;
+}
+
+.department-home-stats {
+  width: 100%;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.department-home-stat {
+  border: 1px solid var(--tertiary-color);
+  width: 12rem;
+  height: 5.5rem auto;
+  padding: 0.8rem;
+  background-color: var(--tertiary-color);
+  color: white;
+  border-radius: 6px;
+  margin-right: 2rem;
+}
+
+.department-home-stat-value {
+  padding-top: 0.2rem;
+  font-size: 1.5rem;
 }
