@@ -117,7 +117,11 @@ export default function ClientMoney() {
               <p>National I.D</p>
               <input type="number" placeholder="Id number" />
             </label>
-            
+
+            <label>
+              <p>Employee number</p>
+              <input type="number" placeholder="Employee number" />
+            </label>
           </div>
           <button type="submit">Register employee</button>
         </form>
