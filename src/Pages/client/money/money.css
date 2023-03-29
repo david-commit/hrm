@@ -52,7 +52,7 @@
 
 #client-money-section2 {
   width: 100%;
-  height: 25%;
+  height: 25vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -97,11 +97,12 @@
 #client-money-section3 {
   width: 100%;
   height: 55%;
-  border: thin solid black;
+  border: 3px solid lightgrey;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+  overflow-y: scroll;
 }
 
 #client-money-section3 > * {
@@ -109,9 +110,79 @@
   margin-bottom: 1vh;
 }
 
+#client-money > h4 {
+  font-size: 1.5rem;
+  color: var(--tertiary-color);
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+#client-money-section3 > * {
+  width: 98%;
+}
+
 #client-money-section3 > h4 {
+  font-size: 1rem;
+  color: var(--tertiary-color);
+}
+
+.client-money-section3-head {
+  width: 100%;
+  height: max-content;
+}
+
+.client-money-section3-head > h4 {
   font-size: 1.3rem;
   color: var(--tertiary-color);
+}
+
+.client-money-section3-head > p {
+  font-size: 0.8rem;
+  color: var(--four-color);
+}
+
+#client-money-section3 > div {
+  height: max-content;
+  display: grid;
+  row-gap: 2vh;
+  column-gap: 2vw;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 2px solid lightgrey;
+  padding-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+#client-money-section3 > div > label {
+  height: 8vh;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  /* border: thin solid black; */
+}
+
+#client-money-section3 > div > label > p {
+  font-size: 1rem;
+}
+
+#client-money-section3 > div > label > select {
+  font-size: 0.8rem;
+  width: 60%;
+  height: 4vh;
+}
+
+#client-money-section3 > div > label > input {
+  width: 100%;
+  height: 4vh;
+  border: thin solid var(--four-color);
+  border-radius: 4px;
+  padding-left: 0.5vw;
 }
 
 #client-money-section3 > button {

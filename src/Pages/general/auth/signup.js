@@ -34,7 +34,7 @@ export default function Signup() {
           response.json().then((data) => {
             localStorage.setItem("employerId", data.id);
             console.log(data);
-            navigate("/client/signup");
+            navigate("/client/home");
           });
         } else {
           response.json().then((data) => {
