@@ -181,6 +181,16 @@ export default function ClientMoney() {
               <p>Bank account number</p>
               <input type="number" placeholder="Bank account number" />
             </label>
+
+            <label>
+              <p>Preferred currency</p>
+              <select>
+                <option value="k-shilling">Kenyan Shilling</option>
+                <option value="us-dollar">U.S dollar</option>
+                <option value="euro">Euro</option>
+                <option value="b-pound">British Pound</option>
+              </select>
+            </label>
           </div>
 
           <span className="client-money-section3-head">
@@ -212,7 +222,6 @@ export default function ClientMoney() {
 
           <button type="submit">Register employee</button>
         </form>
-        
       </section>
     </section>
   );
