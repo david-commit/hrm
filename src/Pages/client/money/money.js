@@ -114,7 +114,7 @@ export default function ClientMoney() {
         <ClientHeader message="Add new employees to your organisation" />
 
         <div id="client-money-section1">
-          <h2>Add new employee to your organisation</h2>
+          <h2>{/* Add new employee to your organisation */}</h2>
           <button onClick={handleDownload}>
             <FaDownload />
             <p>Download Sheet</p>
@@ -135,8 +135,6 @@ export default function ClientMoney() {
           />
           <button type="submit">Add employees</button>
         </form>
-
-        {/* <h4>Add a single employee</h4> */}
 
         <form id="client-money-section3" onSubmit={handleEmployeeData}>
           <span className="client-money-section3-head">
@@ -167,6 +165,11 @@ export default function ClientMoney() {
             </label>
 
             <label>
+              <p>Email Address</p>
+              <input type="text" placeholder="Email address" />
+            </label>
+
+            <label>
               <p>Gender</p>
               <select>
                 <option value="male">Male</option>
@@ -180,11 +183,47 @@ export default function ClientMoney() {
             </label>
 
             <label>
+              <p>Employee role</p>
+              <input type="text" placeholder="Employee role" />
+            </label>
+
+            <label>
               <p>Employee number</p>
+              <input type="number" placeholder="Employee number" />
+            </label>
+
+            <label>
+              <p>Department</p>
               <input type="number" placeholder="Employee number" />
             </label>
           </div>
 
+          <span className="client-money-section3-head">
+            <h4>Contact details</h4>
+            <p>Add the employees contact details.</p>
+          </span>
+
+          <div>
+            <label>
+              <p>Phone number</p>
+              <input type="number" placeholder="Phone number" />
+            </label>
+
+            <label>
+              <p>Whatsapp number</p>
+              <input type="number" placeholder="Whatsapp number" />
+            </label>
+
+            {/* <label>
+              <p>Phone number</p>
+              <input type="number" placeholder="Phone number" />
+            </label>
+
+            <label>
+              <p>Phone number</p>
+              <input type="number" placeholder="Phone number" />
+            </label> */}
+          </div>
           <span className="client-money-section3-head">
             <h4>Financial details</h4>
             <p>Add the employee's financial data</p>
