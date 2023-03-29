@@ -60,10 +60,15 @@ export default function ClientMoney() {
       reader.onload = (event) => {
         let data = new Uint8Array(event.target.result);
         let workbook = XLSX.read(data, { type: "array" });
-        let sheetName = workbook.SheetNames[0];
-        let worksheet = workbook.Sheets[sheetName];
-        let excelData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
-        resolve(excelData);
+        let sheetData = {};
+        workbook.SheetNames.forEach((sheetName) => {
+          let worksheet = workbook.Sheets[sheetName];
+          let sheetDataArray = XLSX.utils.sheet_to_json(worksheet, {
+            header: 1,
+          });
+          sheetData[sheetName] = sheetDataArray;
+        });
+        resolve(sheetData);
       };
       reader.onerror = (event) => {
         reject(event);
@@ -113,7 +118,7 @@ export default function ClientMoney() {
           <button type="submit">Add employees</button>
         </form>
 
-        <h4>Add a single employee</h4>
+        {/* <h4>Add a single employee</h4> */}
 
         <form id="client-money-section3" onSubmit={handleEmployeeData}>
           <span className="client-money-section3-head">
