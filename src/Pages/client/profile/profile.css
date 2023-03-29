@@ -16,8 +16,6 @@
 
 .client-profile-head {
   height: max-content;
-  /* margin-top: 0.5vh;
-  margin-bottom: 0.5vh; */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -26,4 +24,23 @@
 
 .client-profile-head > h3 {
   font-size: 1.5rem;
+  color: var(--tertiary-color);
+}
+
+.client-profile-head > p {
+  font-size: 0.8rem;
+  color: var(--four-color);
+}
+
+#client-profile-1-1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+#client-profile-1-1 > label {
+  height: 10vh;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  width: max-content;
+  border: thin solid black;
 }
