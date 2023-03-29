@@ -212,6 +212,7 @@ export default function ClientMoney() {
 
           <button type="submit">Register employee</button>
         </form>
+        
       </section>
     </section>
   );
