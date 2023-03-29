@@ -4,7 +4,6 @@ import ClientHeader from "../home/header";
 import ClientBar from "../navbar/navbar";
 import "./money.css";
 import { FaDownload } from "react-icons/fa";
-// import { XLSX } from "xlsx";
 import * as XLSX from "xlsx";
 
 export default function ClientMoney() {
@@ -13,6 +12,7 @@ export default function ClientMoney() {
   });
   let [excelData, setExcelData] = useState([]);
 
+  // function to download excel sheet
   let handleDownload = () => {
     let fileUrl = "/workers.xlsx";
     let link = document.createElement("a");
@@ -23,6 +23,7 @@ export default function ClientMoney() {
     document.body.removeChild(link);
   };
 
+  //  function to post employee data
   function handleEmployeeData(event) {
     event.preventDefault();
     fetch("http://localhost:3000/employees", {
@@ -30,30 +31,29 @@ export default function ClientMoney() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: employeeData.name,
-        employer_id: localStorage.getItem("employerId"), // assuming you're storing the employer's ID in local storage after they sign up
+        employer_id: localStorage.getItem("employerId"),
       }),
     })
       .then((response) => {
         if (response.ok) {
-          // navigate to "/client/signup" if the response is ok
           console.log("Success");
           console.log(response);
         } else {
           response.json().then((data) => {
-            console.log(data); // log any errors returned by the API
+            console.log(data);
           });
         }
       })
       .catch((error) => console.log(error));
   }
-
+  // function to handle change
   const handleChange = (event) => {
     setEmployeeData({
       ...employeeData,
       [event.target.name]: event.target.value,
     });
   };
-
+  // function to extract data from excel sheet
   function extractData(file) {
     return new Promise((resolve, reject) => {
       let reader = new FileReader();
@@ -77,6 +77,7 @@ export default function ClientMoney() {
     });
   }
 
+  // function to handle change in the file input
   let handleFileChange = async (event) => {
     event.preventDefault();
     let file = event.target.files[0];
@@ -84,6 +85,7 @@ export default function ClientMoney() {
     setExcelData(data);
   };
 
+  // function to submit and post exceldata
   function handleFileSubmit(event) {
     event.preventDefault();
     console.log(excelData);
