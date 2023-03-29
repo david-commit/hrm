@@ -76,19 +76,48 @@ export default function ClientMoney() {
         </form>
 
         <h4>Add a single employee</h4>
-        
+
         <form id="client-money-section3" onSubmit={handleEmployeeData}>
+          <span className="client-money-section3-head">
+            <h4>Personal details</h4>
+            <p>Add the employees personal data</p>
+          </span>
+
           <div>
-            <input
-              ype="text"
-              name="name"
-              value={employeeData.name}
-              onChange={handleChange}
-              placeholder="First name"
-            />
-            <input type="text" placeholder="Second name" />
-            <input type="text" placeholder="Third name" />
-            <input type="number" placeholder="Id number" />
+            <label>
+              <p>First name</p>
+              <input
+                ype="text"
+                name="name"
+                value={employeeData.name}
+                onChange={handleChange}
+                placeholder="First name"
+              />
+            </label>
+
+            <label>
+              <p>Second name</p>
+              <input type="text" placeholder="Second name" />
+            </label>
+
+            <label>
+              <p>Third name</p>
+              <input type="text" placeholder="Third name" />
+            </label>
+
+            <label>
+              <p>Gender</p>
+              <select>
+                <option value="male">Male</option>
+                <option value="male">Female</option>
+              </select>
+            </label>
+
+            <label>
+              <p>National I.D</p>
+              <input type="number" placeholder="Id number" />
+            </label>
+            
           </div>
           <button type="submit">Register employee</button>
         </form>

@@ -48,14 +48,31 @@ export function MemberDetail() {
     return timeDiffHrs;
   }
 
+  // create fnction to calculate total hours
+  function calculateHoursWorked(timeIn, timeOut) {
+    const timeInMs = Date.parse(timeIn);
+    const timeOutMs = Date.parse(timeOut);
+
+    const hoursWorked = (timeOutMs - timeInMs) / 1000 / 60 / 60;
+
+    // Round to two decimal places
+    const hoursWorkedRounded = hoursWorked.toFixed(2);
+
+    return hoursWorkedRounded;
+  }
+
   // calculate function to post attendance data
   function handleAttendance(event) {
     event.preventDefault();
     attendanceData.department_id = "";
     attendanceData.employee_id = parseInt(userId);
-    attendanceData.timeIn = checkIn(attendanceData.timeIn);
-    attendanceData.timeOut = checkOut(attendanceData.timeOut);
+    attendanceData.in_time = checkIn(attendanceData.timeIn);
+    attendanceData.out_time = checkOut(attendanceData.timeOut);
     attendanceData.date = new Date().toLocaleDateString();
+    attendanceData.total_hours = calculateHoursWorked(
+      attendanceData.timeIn,
+      attendanceData.timeOut
+    );
 
     console.log(attendanceData);
     fetch("http://localhost:3000/attendances", {
