@@ -123,6 +123,93 @@ export default function ClientMoney() {
               <input type="number" placeholder="Employee number" />
             </label>
           </div>
+
+          <span className="client-money-section3-head">
+            <h4>Financial details</h4>
+            <p>Add the employee's financial data</p>
+          </span>
+
+          <div>
+            <label>
+              <p>NSSF member number</p>
+              <input type="text" placeholder="NSSF number" />
+            </label>
+
+            <label>
+              <p>NHIF number</p>
+              <input type="text" placeholder="NHIF number" />
+            </label>
+
+            <label>
+              <p>KRA pin</p>
+              <input type="text" placeholder="KRA pin" />
+            </label>
+
+            <label>
+              <p>Other number</p>
+              <input type="number" placeholder="Other number" />
+            </label>
+          </div>
+
+          <span className="client-money-section3-head">
+            <h4>Bank details</h4>
+            <p>Add the employees bank details</p>
+          </span>
+
+          <div>
+            <label>
+              <p>Bank name</p>
+              <input type="text" placeholder="bank name" />
+            </label>
+
+            <label>
+              <p>Bank code</p>
+              <input type="text" placeholder="bank code" />
+            </label>
+
+            <label>
+              <p>Branch name</p>
+              <input type="text" placeholder="branch name" />
+            </label>
+
+            <label>
+              <p>Branch code</p>
+              <input type="text" placeholder="branch code" />
+            </label>
+
+            <label>
+              <p>Bank account number</p>
+              <input type="number" placeholder="Bank account number" />
+            </label>
+          </div>
+
+          <span className="client-money-section3-head">
+            <h4>Location details</h4>
+            <p>Add the employees location details</p>
+          </span>
+
+          <div>
+            <label>
+              <p>Country</p>
+              <input type="text" placeholder="Country of residence" />
+            </label>
+
+            <label>
+              <p>County</p>
+              <input type="text" placeholder="County of residence" />
+            </label>
+
+            <label>
+              <p>Sub-County</p>
+              <input type="text" placeholder="Sub-County of residence" />
+            </label>
+
+            <label>
+              <p>Location</p>
+              <input type="text" placeholder="Location of residence" />
+            </label>
+          </div>
+
           <button type="submit">Register employee</button>
         </form>
       </section>

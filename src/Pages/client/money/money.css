@@ -121,6 +121,11 @@
   margin-bottom: 1vh;
 }
 
+#client-money-section3 {
+  height: max-content;
+  overflow-y: scroll;
+}
+
 #client-money-section3 > * {
   width: 98%;
 }
@@ -132,7 +137,6 @@
 
 .client-money-section3-head {
   width: 100%;
-  /* border: thin solid black; */
   height: max-content;
 }
 
