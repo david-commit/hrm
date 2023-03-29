@@ -73,10 +73,16 @@ export default function ClientMoney() {
   }
 
   let handleFileChange = async (event) => {
+    event.preventDefault();
     let file = event.target.files[0];
     let data = await extractData(file);
     setExcelData(data);
   };
+
+  function handleFileSubmit(event) {
+    event.preventDefault();
+    console.log(excelData);
+  }
 
   return (
     <section id="client-cont">
@@ -92,7 +98,7 @@ export default function ClientMoney() {
           </button>
         </div>
 
-        <form id="client-money-section2">
+        <form id="client-money-section2" onSubmit={handleFileSubmit}>
           <h4>Mass add employees to your organisation.</h4>
           <p>
             Download the excel sheet, fill out your employees details then
