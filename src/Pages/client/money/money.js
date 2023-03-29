@@ -74,6 +74,22 @@ export default function ClientMoney() {
         reject(event);
       };
       reader.readAsArrayBuffer(file);
+    }).then((sheetData) => {
+      let extractedData = {};
+      Object.keys(sheetData).forEach((sheetName) => {
+        let sheetDataArray = sheetData[sheetName];
+        let headers = sheetDataArray[0];
+        let rows = sheetDataArray.slice(1);
+        let sheetObjects = rows.map((row) => {
+          let obj = {};
+          headers.forEach((header, index) => {
+            obj[header] = row[index];
+          });
+          return obj;
+        });
+        extractedData[sheetName] = sheetObjects;
+      });
+      return extractedData;
     });
   }
 
