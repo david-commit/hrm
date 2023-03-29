@@ -4,11 +4,14 @@ import ClientHeader from "../home/header";
 import ClientBar from "../navbar/navbar";
 import "./money.css";
 import { FaDownload } from "react-icons/fa";
+// import { XLSX } from "xlsx";
+import * as XLSX from "xlsx";
 
 export default function ClientMoney() {
   let [employeeData, setEmployeeData] = useState({
     name: "",
   });
+  let [excelData, setExcelData] = useState([]);
 
   let handleDownload = () => {
     let fileUrl = "/workers.xlsx";
@@ -33,7 +36,7 @@ export default function ClientMoney() {
       .then((response) => {
         if (response.ok) {
           // navigate to "/client/signup" if the response is ok
-          console.log("SUccess");
+          console.log("Success");
           console.log(response);
         } else {
           response.json().then((data) => {
@@ -49,6 +52,30 @@ export default function ClientMoney() {
       ...employeeData,
       [event.target.name]: event.target.value,
     });
+  };
+
+  function extractData(file) {
+    return new Promise((resolve, reject) => {
+      let reader = new FileReader();
+      reader.onload = (event) => {
+        let data = new Uint8Array(event.target.result);
+        let workbook = XLSX.read(data, { type: "array" });
+        let sheetName = workbook.SheetNames[0];
+        let worksheet = workbook.Sheets[sheetName];
+        let excelData = XLSX.utils.sheet_to_json(worksheet, { header: 1 });
+        resolve(excelData);
+      };
+      reader.onerror = (event) => {
+        reject(event);
+      };
+      reader.readAsArrayBuffer(file);
+    });
+  }
+
+  let handleFileChange = async (event) => {
+    let file = event.target.files[0];
+    let data = await extractData(file);
+    setExcelData(data);
   };
 
   return (
@@ -71,7 +98,12 @@ export default function ClientMoney() {
             Download the excel sheet, fill out your employees details then
             upload it.
           </p>
-          <input type="file" accept=".xlsx" className="file-upload-input" />
+          <input
+            type="file"
+            accept=".xlsx"
+            className="file-upload-input"
+            onChange={handleFileChange}
+          />
           <button type="submit">Add employees</button>
         </form>
 
