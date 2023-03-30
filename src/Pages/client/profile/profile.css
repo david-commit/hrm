@@ -1,24 +1,46 @@
 #client-profile {
   width: 95vw;
   height: 100%;
-}
-
-#client-profile-1 {
-  width: 100%;
-  height: 90%;
-  border: thin solid black;
-}
-
-#client-profile-1 > h3 {
-  height: 4vh;
-  font-size: 1.5rem;
-  width: 100%;
-  color: var(--tertiary-color);
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-between;
 }
 
+#client-profile > form,
+#client-profile > span,
+#client-profile > select {
+  width: 98%;
+  border: thin solid black;
+}
 
+.client-profile-head {
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.client-profile-head > h3 {
+  font-size: 1.5rem;
+  color: var(--tertiary-color);
+}
+
+.client-profile-head > p {
+  font-size: 0.8rem;
+  color: var(--four-color);
+}
+
+#client-profile-1-1 {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+}
+
+#client-profile-1-1 > label {
+  height: 10vh;
+  margin-top: 0.5vh;
+  margin-bottom: 0.5vh;
+  width: max-content;
+  border: thin solid black;
+}
