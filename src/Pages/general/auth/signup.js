@@ -41,6 +41,7 @@ export default function Signup() {
           response.json().then((data) => {
             localStorage.setItem("employerId", data.id);
             console.log(data);
+            localStorage.setItem("jwtToken", data.jwt);
             // navigate("/client/home");
           });
         } else {
