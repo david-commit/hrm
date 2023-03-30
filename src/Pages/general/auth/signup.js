@@ -24,17 +24,24 @@ export default function Signup() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    fetch("http://localhost:3000/employers", {
+    fetch("http://localhost:3000/api/v1/users", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formData),
+      body: JSON.stringify({
+        user: {
+          email: formData.email,
+          name: formData.name,
+          password: formData.password,
+          password_confirmation: formData.password_confirmation,
+        },
+      }),
     })
       .then((response) => {
         if (response.ok) {
           response.json().then((data) => {
             localStorage.setItem("employerId", data.id);
             console.log(data);
-            navigate("/client/home");
+            // navigate("/client/home");
           });
         } else {
           response.json().then((data) => {
