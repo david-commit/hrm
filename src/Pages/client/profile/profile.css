@@ -35,27 +35,40 @@
 
 #client-profile-1 > form > span > section {
   display: flex;
-  margin-top: 2rem;
+  margin-top: 1rem;
   flex-direction: column;
   margin-right: 2rem;
   width: 100%;
   max-width: 16rem;
 }
 
-#client-profile-1 > form > span > section> input, 
-#client-profile-1 > form > span > section> select {
+#client-profile-1 > form > span > section > input,
+#client-profile-1 > form > span > section > select {
   margin-top: 0.8rem;
   padding: 0.4rem;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
 
- #client-profile-1 > form > button {
+#client-profile-1 > form > button {
   width: fit-content;
   padding: 4px 8px;
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   background-color: var(--tertiary-color);
   color: white;
   border: 1px solid var(--tertiary-color);
   border-radius: 4px;
- }
+}
+
+#salary-selection-div {
+  display: flex;
+  flex-direction: column;
+}
+
+#salary-selection-div > select {
+  margin-top: 0.8rem;
+  max-width: 16rem;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}

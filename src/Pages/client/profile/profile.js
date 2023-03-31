@@ -64,27 +64,47 @@ export default function ClientProfile() {
           </form>
 
           <form>
+            <h3>Financial details</h3>
             <span>
-              <h3>Financial details</h3>
-              <input type='text' placeholder='KRA pin' />
-              <input type='text' placeholder='NSSF number' />
-              <input type='text' placeholder='NHIF number' />
-              <input type='text' placeholder='Bank name' />
-              <input type='text' placeholder='Bank branch' />
-              <input type='text' placeholder='Bank account number' />
+              <section>
+                <label>KRA Pin.</label>
+                <input type='text' placeholder='KRA pin' />
+              </section>
+              <section>
+                <label>NSSF Member No.</label>
+                <input type='text' placeholder='NSSF number' />
+              </section>
+              <section>
+                <label>NHIF Member No.</label>
+                <input type='text' placeholder='NHIF number' />
+              </section>
+              <section>
+                <label>Bank Name</label>
+                <input type='text' placeholder='Bank name' />
+              </section>
+              <section>
+                <label>Bank Branch</label>
+                <input type='text' placeholder='Bank branch' />
+              </section>
+              <section>
+                <label>Bank Acc. No.</label>
+                <input type='text' placeholder='Bank account number' />
+              </section>
             </span>
             <button type='submit'>Update details</button>
           </form>
 
           <form>
+            <h3>Salaries and Renumerations</h3>
             <span>
-              <h3>Salaries and Renumerations</h3>
-              <label>Set payment range for permanent employees.</label>
-              <select>
-                <option value='one-week'>One week</option>
-                <option value='two-week'>Two weeks</option>
-                <option value='one-month'>One month</option>
-              </select>
+              <div id='salary-selection-div'>
+                <label>Set payment range for permanent employees.</label>
+                <select>
+                  <option value='one-week'>One week</option>
+                  <option value='two-week'>Two weeks</option>
+                  <option value='one-month'>One month</option>
+                </select>
+              </div>
             </span>
             <button type='submit'>Update details</button>
           </form>
