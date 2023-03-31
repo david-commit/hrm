@@ -8,20 +8,23 @@ export default function EmployeePerformanceReport({ employee }) {
 
     // Add the employee name to the PDF
     doc.setFontSize(20);
-    doc.text(`Performance Report for ${employee.name}`, 10, 20);
+    doc.text(`Performance Report for ${employee}`, 10, 20);
 
     // Add a table for the performance data
-    const performanceData = employee.performance.map((p) => [
-      p.date,
-      p.metric1,
-      p.metric2,
-      p.metric3,
-    ]);
-    doc.autoTable({
-      startY: 40,
-      head: [["Date", "Metric 1", "Metric 2", "Metric 3"]],
-      body: performanceData,
-    });
+    // const performanceData = employee.performance.map((p) => [
+    //   p.date,
+    //   p.metric1,
+    //   p.metric2,
+    //   p.metric3,
+    // ]);
+    // doc.autoTable({
+    //   startY: 40,
+    //   head: [["Date", "Metric 1", "Metric 2", "Metric 3"]],
+    //   body: performanceData,
+    // });
+
+    // Output the pdf in a new window
+    doc.output("dataurlnewwindow");
 
     // Save the PDF
     doc.save(`Performance Report for ${employee.name}.pdf`);

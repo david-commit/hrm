@@ -31,6 +31,7 @@ export default function Payslip({ employee }) {
     // Open the generated PDF in a separate browser tab
     doc.output("dataurlnewwindow");
   };
+  
   return (
     <button
       onClick={generatePayslip}
