@@ -4,12 +4,15 @@ import ClientHeader from "../home/header";
 import ClientBar from "../navbar/navbar";
 import "./money.css";
 import { FaDownload } from "react-icons/fa";
+import * as XLSX from "xlsx";
 
 export default function ClientMoney() {
   let [employeeData, setEmployeeData] = useState({
     name: "",
   });
+  let [excelData, setExcelData] = useState([]);
 
+  // function to download excel sheet
   let handleDownload = () => {
     let fileUrl = "/workers.xlsx";
     let link = document.createElement("a");
@@ -20,6 +23,7 @@ export default function ClientMoney() {
     document.body.removeChild(link);
   };
 
+  //  function to post employee data
   function handleEmployeeData(event) {
     event.preventDefault();
     fetch("http://localhost:3000/employees", {
@@ -27,29 +31,81 @@ export default function ClientMoney() {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         name: employeeData.name,
-        employer_id: localStorage.getItem("employerId"), // assuming you're storing the employer's ID in local storage after they sign up
+        employer_id: localStorage.getItem("employerId"),
       }),
     })
       .then((response) => {
         if (response.ok) {
-          // navigate to "/client/signup" if the response is ok
-          console.log("SUccess");
+          console.log("Success");
           console.log(response);
         } else {
           response.json().then((data) => {
-            console.log(data); // log any errors returned by the API
+            console.log(data);
           });
         }
       })
       .catch((error) => console.log(error));
   }
-
+  // function to handle change
   const handleChange = (event) => {
     setEmployeeData({
       ...employeeData,
       [event.target.name]: event.target.value,
     });
   };
+  // function to extract data from excel sheet
+  function extractData(file) {
+    return new Promise((resolve, reject) => {
+      let reader = new FileReader();
+      reader.onload = (event) => {
+        let data = new Uint8Array(event.target.result);
+        let workbook = XLSX.read(data, { type: "array" });
+        let sheetData = {};
+        workbook.SheetNames.forEach((sheetName) => {
+          let worksheet = workbook.Sheets[sheetName];
+          let sheetDataArray = XLSX.utils.sheet_to_json(worksheet, {
+            header: 1,
+          });
+          sheetData[sheetName] = sheetDataArray;
+        });
+        resolve(sheetData);
+      };
+      reader.onerror = (event) => {
+        reject(event);
+      };
+      reader.readAsArrayBuffer(file);
+    }).then((sheetData) => {
+      let extractedData = {};
+      Object.keys(sheetData).forEach((sheetName) => {
+        let sheetDataArray = sheetData[sheetName];
+        let headers = sheetDataArray[0];
+        let rows = sheetDataArray.slice(1);
+        let sheetObjects = rows.map((row) => {
+          let obj = {};
+          headers.forEach((header, index) => {
+            obj[header] = row[index];
+          });
+          return obj;
+        });
+        extractedData[sheetName] = sheetObjects;
+      });
+      return extractedData;
+    });
+  }
+
+  // function to handle change in the file input
+  let handleFileChange = async (event) => {
+    event.preventDefault();
+    let file = event.target.files[0];
+    let data = await extractData(file);
+    setExcelData(data);
+  };
+
+  // function to submit and post exceldata
+  function handleFileSubmit(event) {
+    event.preventDefault();
+    console.log(excelData);
+  }
 
   return (
     <section id="client-cont">
@@ -58,24 +114,27 @@ export default function ClientMoney() {
         <ClientHeader message="Add new employees to your organisation" />
 
         <div id="client-money-section1">
-          <h2>Add new employee to your organisation</h2>
+          <h2>{/* Add new employee to your organisation */}</h2>
           <button onClick={handleDownload}>
             <FaDownload />
             <p>Download Sheet</p>
           </button>
         </div>
 
-        <form id="client-money-section2">
+        <form id="client-money-section2" onSubmit={handleFileSubmit}>
           <h4>Mass add employees to your organisation.</h4>
           <p>
             Download the excel sheet, fill out your employees details then
             upload it.
           </p>
-          <input type="file" accept=".xlsx" className="file-upload-input" />
+          <input
+            type="file"
+            accept=".xlsx"
+            className="file-upload-input"
+            onChange={handleFileChange}
+          />
           <button type="submit">Add employees</button>
         </form>
-
-        <h4>Add a single employee</h4>
 
         <form id="client-money-section3" onSubmit={handleEmployeeData}>
           <span className="client-money-section3-head">
@@ -106,6 +165,11 @@ export default function ClientMoney() {
             </label>
 
             <label>
+              <p>Email Address</p>
+              <input type="text" placeholder="Email address" />
+            </label>
+
+            <label>
               <p>Gender</p>
               <select>
                 <option value="male">Male</option>
@@ -119,11 +183,47 @@ export default function ClientMoney() {
             </label>
 
             <label>
+              <p>Employee role</p>
+              <input type="text" placeholder="Employee role" />
+            </label>
+
+            <label>
               <p>Employee number</p>
+              <input type="number" placeholder="Employee number" />
+            </label>
+
+            <label>
+              <p>Department</p>
               <input type="number" placeholder="Employee number" />
             </label>
           </div>
 
+          <span className="client-money-section3-head">
+            <h4>Contact details</h4>
+            <p>Add the employees contact details.</p>
+          </span>
+
+          <div>
+            <label>
+              <p>Phone number</p>
+              <input type="number" placeholder="Phone number" />
+            </label>
+
+            <label>
+              <p>Whatsapp number</p>
+              <input type="number" placeholder="Whatsapp number" />
+            </label>
+
+            {/* <label>
+              <p>Phone number</p>
+              <input type="number" placeholder="Phone number" />
+            </label>
+
+            <label>
+              <p>Phone number</p>
+              <input type="number" placeholder="Phone number" />
+            </label> */}
+          </div>
           <span className="client-money-section3-head">
             <h4>Financial details</h4>
             <p>Add the employee's financial data</p>
@@ -181,6 +281,16 @@ export default function ClientMoney() {
               <p>Bank account number</p>
               <input type="number" placeholder="Bank account number" />
             </label>
+
+            <label>
+              <p>Preferred currency</p>
+              <select>
+                <option value="k-shilling">Kenyan Shilling</option>
+                <option value="us-dollar">U.S dollar</option>
+                <option value="euro">Euro</option>
+                <option value="b-pound">British Pound</option>
+              </select>
+            </label>
           </div>
 
           <span className="client-money-section3-head">
@@ -212,7 +322,6 @@ export default function ClientMoney() {
 
           <button type="submit">Register employee</button>
         </form>
-        
       </section>
     </section>
   );
