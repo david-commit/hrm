@@ -12,7 +12,7 @@ import ClientEmployee from "./Pages/client/employee/employee";
 import ClientProfile from "./Pages/client/profile/profile";
 import Messages from "./Pages/client/notifications/message";
 import Notifications from "./Pages/client/notifications/notifs";
-import EmployeeSchedule from './Pages/employee/schedule/EmployeeSchedule'
+import EmployeeSchedule from "./Pages/employee/schedule/EmployeeSchedule";
 import EmployeeEditProfile from "./Pages/employee/EmployeeEditProfile/EmployeeEditProfile";
 import DepartmentHome from "./Pages/department/home/home";
 import DepartmentMembers from "./Pages/department/members/members";
@@ -21,9 +21,6 @@ import DepartmentApps from "./Pages/department/apps/app";
 import DepartmentProfile from "./Pages/department/profile/profile";
 
 function App() {
-  let employerId = localStorage.getItem("employerId");
-  console.group(employerId);
-  
   return (
     <BrowserRouter>
       <Routes>
