@@ -5,7 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-
+  margin-left: 5vw;
 }
 
 #client-home-header {
@@ -17,7 +17,6 @@
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
   box-shadow: rgba(79, 86, 89, 0.2) 0px 8px 24px 0px;
-  margin-left: 5%;
 }
 
 #client-home-header > div {
