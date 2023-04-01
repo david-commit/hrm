@@ -60,7 +60,7 @@
 
 .payment-list {
   width: 95%;
-  border: thin solid black;
+  border: thin solid var(--tertiary-color);
   cursor: pointer;
   border-radius: 4px;
   height: 12vh;
@@ -75,21 +75,21 @@
 
 .payment-list > * {
   height: 100%;
-  border: thin solid black;
 }
 
 .payment-list-head {
-  width: 5%;
+  width: 10%;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: 1rem;
-  color: var(--tertiary-color);
+  color: var(--primary-color);
+  background-color: var(--tertiary-color);
 }
 
 .payment-list-body {
-  width: 95%;
+  width: 90%;
   display: flex;
   flex-direction: column;
   align-items: center;

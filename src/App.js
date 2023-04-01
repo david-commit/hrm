@@ -19,6 +19,7 @@ import DepartmentMembers from "./Pages/department/members/members";
 import { MemberDetail } from "./Pages/department/members/detail";
 import DepartmentApps from "./Pages/department/apps/app";
 import DepartmentProfile from "./Pages/department/profile/profile";
+import DepartmentPay from "./Pages/client/signup/department";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/client">
           <Route path="home" element={<ClientHome />} />
           <Route path="signup" element={<ClientSignup />} />
+          <Route path="signup/:id" element={<DepartmentPay />} />
           <Route path="money" element={<ClientMoney />} />
           <Route path="employee" element={<ClientEmployee />} />
           <Route path="profile" element={<ClientProfile />} />
