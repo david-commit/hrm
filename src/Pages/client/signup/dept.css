@@ -1,0 +1,98 @@
+#client-payment-cont2 > h4 {
+  width: 100%;
+  height: 10%;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: lighter;
+}
+
+#client-payment-button {
+  width: 95%;
+  height: 7%;
+  border: thin solid transparent;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: var(--tertiary-color);
+  margin-bottom: 1vh;
+  background-color: white;
+}
+
+#client-payment-cont1 > h4 {
+  width: 100%;
+  height: 10%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: lighter;
+  color: var(--tertiary-color);
+  margin-bottom: 0.5vh;
+}
+
+#client-payment-cont1 > h5 {
+  width: 100%;
+  height: 7%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  font-weight: lighter;
+  color: var(--tertiary-color);
+}
+
+#client-payment-cont-1-1 {
+  width: 100%;
+  height: 20%;
+  /* border: thin solid black; */
+  margin-bottom: 0.5vh;
+  margin-top: 0.5vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.client-payment-cont-1-1 {
+  width: 24%;
+  height: 98%;
+  border-radius: 4px;
+  border: thin solid black;
+}
+
+#client-payment-cont-1-2-head {
+  width: 98%;
+  height: 5%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#client-payment-cont-1-2-head > span {
+  font-size: 1rem;
+  width: 25%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#client-payment-cont-1-2 {
+  border: thin solid black;
+  width: 98%;
+  height: max-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
