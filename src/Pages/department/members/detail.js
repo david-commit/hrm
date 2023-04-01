@@ -29,9 +29,11 @@ export function MemberDetail() {
   }
 
   // create function to post attendace data
-
-  function handleAttendance() {
-    
+  function handleAttendance(e) {
+    e.preventDefault();
+    let nairobiDate = new Date().toLocaleDateString("en-Us", {
+      timeZone: "Africa/Nairobi",
+    });
   }
 
   // handle user not found
