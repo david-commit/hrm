@@ -1,7 +1,7 @@
 import "./signup.css";
 import ClientBar from "../navbar/navbar";
 import ClientHeader from "../home/header";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 let data = [
   {
@@ -27,12 +27,6 @@ let data = [
 ];
 
 export default function ClientSignup() {
-  let navigate = useNavigate();
-
-  function redrectToDepartment() {
-    navigate("/client/signup/:id");
-  }
-
   return (
     <section id="client-cont">
       <ClientBar />
@@ -52,7 +46,6 @@ export default function ClientSignup() {
                 </span>
                 <span className="payment-list-body">
                   <p>{department.department_name}</p>
-                  {/* <button onClick={() => redirectToDepartment(department.department_id)}>Sign up</button> */}
                 </span>
               </Link>
             ))}

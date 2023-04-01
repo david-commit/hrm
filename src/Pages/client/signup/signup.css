@@ -68,6 +68,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 .payment-list > * {
