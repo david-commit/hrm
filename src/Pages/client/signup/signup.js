@@ -7,34 +7,12 @@ export default function ClientSignup() {
       <ClientBar />
       <section id="client-signup">
         <ClientHeader message="Its payday approve payments" />
-        <form>
-          <h3>Set up dates for payment</h3>
-          <span></span>
-          <button type="submit">Update</button>
-        </form>
-
-        <div>
-          <h3>Approve payment</h3>
-          <span>
-            <p>Approve payment for casual employees</p>
-            <button>Approve</button>
-          </span>
-
-          <span>
-            <p>Approve payment for permanent employees</p>
-            <button>Approve</button>
-          </span>
-
-          <span>
-            <p>Approve payment for seasonal employees</p>
-            <button>Approve</button>
-          </span>
-
-          <span>
-            <p>Approve payment for casual employees</p>
-            <button>Approve</button>
-          </span>
-        </div>
+        <section id="client-payment-cont">
+          <div id="client-payment-cont1">
+            <h3>Release Employees Salaries</h3>
+          </div>
+          <aside id="client-payment-cont2"></aside>
+        </section>
       </section>
     </section>
   );

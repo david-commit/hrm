@@ -1,5 +1,8 @@
+import "./fin.css";
+import React from "react";
 import jsPDF from "jspdf";
 import "jspdf-autotable";
+import { FaDownload } from "react-icons/fa";
 
 export default function EmployeePerformanceReport({ employee }) {
   const generateReport = () => {
