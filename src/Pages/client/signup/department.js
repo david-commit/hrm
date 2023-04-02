@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import ClientBar from "../navbar/navbar";
 import ClientHeader from "../home/header";
@@ -6,8 +6,39 @@ import "./dept.css";
 
 export default function DepartmentPay() {
   let { id } = useParams();
+  const [employeeId, setEmployeeId] = useState("");
+  const [startDate, setStartDate] = useState("");
+  const [endDate, setEndDate] = useState("");
 
-  console.log(id);
+  function handleSetPay(e) {
+    e.preventDefault();
+    console.log(id);
+
+    fetch("http://localhost:3000/payslips", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        employee_id: 1,
+        start_date: "startdate",
+        end_date: "enddate",
+      }),
+    })
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log("Success:", data);
+      })
+      .catch((error) => {
+        console.error("Error:", error);
+      });
+  }
+
   return (
     <section id="client-cont">
       <ClientBar />
@@ -23,7 +54,7 @@ export default function DepartmentPay() {
               <span className="client-payment-cont-1-1"></span>
             </div>
 
-            <form id="client-payment-cont-1-3">
+            <form id="client-payment-cont-1-3" onSubmit={handleSetPay}>
               <h5>Set pay period</h5>
               <span>
                 <label>
@@ -37,7 +68,7 @@ export default function DepartmentPay() {
                 </label>
               </span>
 
-              <button>Set pay period</button>
+              <button type="submit">Set pay period</button>
             </form>
 
             <h5>Top Earners</h5>
