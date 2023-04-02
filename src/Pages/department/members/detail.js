@@ -28,73 +28,37 @@ export function MemberDetail() {
     }));
   }
 
-  // create fnction to calculate tie for user in
-  function checkIn(timeIn) {
-    const nineAm = new Date();
-    nineAm.setHours(9, 0, 0, 0);
-    const timeInDate = new Date(timeIn);
-    const timeDiffMs = timeInDate - nineAm;
-    const timeDiffHrs = timeDiffMs / (1000 * 60 * 60);
-    return timeDiffHrs;
-  }
+  // create function to post attendace data
+  function handleAttendance(e) {
+    e.preventDefault();
+    let nairobiDate = new Date().toLocaleDateString("en-Us", {
+      timeZone: "Africa/Nairobi",
+    });
 
-  // create fnction to calculate tie for user out
-  function checkOut(timeOut) {
-    const nineAm = new Date();
-    nineAm.setHours(17, 0, 0, 0);
-    const timeInDate = new Date(timeOut);
-    const timeDiffMs = timeInDate - nineAm;
-    const timeDiffHrs = timeDiffMs / (1000 * 60 * 60);
-    return timeDiffHrs;
-  }
+    let data = {
+      employee_id: 1,
+      date: nairobiDate,
+      time_in: attendanceData.timeIn,
+      time_out: attendanceData.timeOut,
+    };
 
-  // create fnction to calculate total hours
-  function calculateHoursWorked(timeIn, timeOut) {
-    const timeInMs = Date.parse(timeIn);
-    const timeOutMs = Date.parse(timeOut);
-
-    const hoursWorked = (timeOutMs - timeInMs) / 1000 / 60 / 60;
-
-    // Round to two decimal places
-    const hoursWorkedRounded = hoursWorked.toFixed(2);
-
-    return hoursWorkedRounded;
-  }
-
-  // calculate function to post attendance data
-  function handleAttendance(event) {
-    event.preventDefault();
-    attendanceData.department_id = "";
-    attendanceData.employee_id = parseInt(userId);
-    attendanceData.in_time = checkIn(attendanceData.timeIn);
-    attendanceData.out_time = checkOut(attendanceData.timeOut);
-    attendanceData.date = new Date().toLocaleDateString();
-    attendanceData.total_hours = calculateHoursWorked(
-      attendanceData.timeIn,
-      attendanceData.timeOut
-    );
-
-    console.log(attendanceData);
     fetch("http://localhost:3000/attendances", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify(attendanceData),
+      body: JSON.stringify(data),
     })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        console.log("Form data posted successfully");
-        checkIn(attendanceData.timeIn);
-        // other code here
+      .then((response) => response.json())
+      .then((data) => {
+        console.log("Success:", data);
       })
       .catch((error) => {
-        console.error("Error posting form data:", error);
+        console.error("Error:", error);
       });
   }
 
+  // handle user not found
   const user = users.find((u) => u.id === Number(userId));
   if (!user) {
     return <div>User not found</div>;
@@ -196,7 +160,7 @@ export function MemberDetail() {
           <span>
             <label>Time in:</label>
             <input
-              type="datetime-local"
+              type="time"
               name="timeIn"
               value={attendanceData.timeIn}
               onChange={handleChange}
@@ -206,7 +170,7 @@ export function MemberDetail() {
           <span>
             <label>Time out:</label>
             <input
-              type="datetime-local"
+              type="time"
               name="timeOut"
               value={attendanceData.timeOut}
               onChange={handleChange}

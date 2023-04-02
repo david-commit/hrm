@@ -12,19 +12,20 @@ import ClientEmployee from "./Pages/client/employee/employee";
 import ClientProfile from "./Pages/client/profile/profile";
 import Messages from "./Pages/client/notifications/message";
 import Notifications from "./Pages/client/notifications/notifs";
-import EmployeeSchedule from './Pages/employee/schedule/EmployeeSchedule'
+import EmployeeSchedule from "./Pages/employee/schedule/EmployeeSchedule";
 import EmployeeEditProfile from "./Pages/employee/EmployeeEditProfile/EmployeeEditProfile";
 import DepartmentHome from "./Pages/department/home/home";
 import DepartmentMembers from "./Pages/department/members/members";
 import { MemberDetail } from "./Pages/department/members/detail";
 import DepartmentApps from "./Pages/department/apps/app";
 import DepartmentProfile from "./Pages/department/profile/profile";
+
 import ClientApprovals from './Pages/client/ClientApprovals/ClientApprovals'
 
+import DepartmentPay from "./Pages/client/signup/department";
+
+
 function App() {
-  let employerId = localStorage.getItem("employerId");
-  console.group(employerId);
-  
   return (
     <BrowserRouter>
       <Routes>
@@ -39,6 +40,7 @@ function App() {
         <Route path="/client">
           <Route path="home" element={<ClientHome />} />
           <Route path="signup" element={<ClientSignup />} />
+          <Route path="signup/:id" element={<DepartmentPay />} />
           <Route path="money" element={<ClientMoney />} />
           <Route path="employee" element={<ClientEmployee />} />
           <Route path="profile" element={<ClientProfile />} />
