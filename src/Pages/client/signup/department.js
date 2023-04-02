@@ -23,8 +23,24 @@ export default function DepartmentPay() {
               <span className="client-payment-cont-1-1"></span>
             </div>
 
-            <h5>Top Earners</h5>
+            <form id="client-payment-cont-1-3">
+              <h5>Set pay period</h5>
+              <span>
+                <label>
+                  <p>Start date</p>
+                  <input type="date" />
+                </label>
 
+                <label>
+                  <p>Start date</p>
+                  <input type="date" />
+                </label>
+              </span>
+
+              <button>Set pay periodIIII</button>
+            </form>
+
+            <h5>Top Earners</h5>
             <div id="client-payment-cont-1-2-head">
               <span>Name</span>
               <span>Days Present</span>

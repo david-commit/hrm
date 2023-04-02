@@ -38,8 +38,8 @@ export function MemberDetail() {
     let data = {
       employee_id: 1,
       date: nairobiDate,
-      clock_in: attendanceData.clock_in,
-      time_out: attendanceData.clock_out,
+      time_in: attendanceData.timeIn,
+      time_out: attendanceData.timeOut,
     };
 
     fetch("http://localhost:3000/attendances", {
@@ -160,7 +160,7 @@ export function MemberDetail() {
           <span>
             <label>Time in:</label>
             <input
-              type="datetime-local"
+              type="time"
               name="timeIn"
               value={attendanceData.timeIn}
               onChange={handleChange}
@@ -170,7 +170,7 @@ export function MemberDetail() {
           <span>
             <label>Time out:</label>
             <input
-              type="datetime-local"
+              type="time"
               name="timeOut"
               value={attendanceData.timeOut}
               onChange={handleChange}
