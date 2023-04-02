@@ -32,12 +32,12 @@ export default function DepartmentPay() {
                 </label>
 
                 <label>
-                  <p>Start date</p>
+                  <p>End date</p>
                   <input type="date" />
                 </label>
               </span>
 
-              <button>Set pay periodIIII</button>
+              <button>Set pay period</button>
             </form>
 
             <h5>Top Earners</h5>

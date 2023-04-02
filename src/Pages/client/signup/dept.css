@@ -95,3 +95,61 @@
   align-items: center;
   justify-content: flex-start;
 }
+
+#client-payment-cont-1-3 {
+  width: 98%;
+  height: 30%;
+  border: thin solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#client-payment-cont-1-3 > h5 {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+}
+
+#client-payment-cont-1-3 > span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 70%;
+}
+
+#client-payment-cont-1-3 > span > label {
+  width: 40%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+#client-payment-cont-1-3 > span > label > p {
+  width: 100%;
+  font-size: 1rem;
+  text-align: center;
+}
+
+#client-payment-cont-1-3 > span > label > input {
+  width: 100%;
+  height: 40%;
+  border: thin solid black;
+  font-size: 1rem;
+  border-radius: 4px;
+
+}
+
+#client-payment-cont-1-3 > button {
+  width: 50%;
+  height: 20%;
+}
