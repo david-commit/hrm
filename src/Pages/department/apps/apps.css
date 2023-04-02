@@ -10,7 +10,6 @@
 #department-apps > div {
   width: 15%;
   height: 25%;
-  border: thin solid black;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -20,13 +19,31 @@
   margin-right: 1vw;
 }
 
-.dept-apps-cont > * {
+.dept-apps-cont > a,
+.dept-apps-cont > span 
+{
   width: 100%;
-  border: thin solid black;
+  border: thin solid var(--tertiary-color);
+}
+.dept-apps-cont > a {
+  border-radius: 0 0 6px 6px;
+  color: var(--tertiary-color);
+  font-weight: 600;
 }
 
 .dept-apps-cont > span {
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
   height: 70%;
+  background-color: var(--tertiary-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#department-apps-icon {
+  color: white;
+  font-size: 3rem;
 }
 
 .dept-apps-cont > a {

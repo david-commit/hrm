@@ -1,6 +1,7 @@
 #client-employee {
-  width: 95vw;
+  width: 95%;
   height: 100%;
+  margin-left: 5%;
 }
 
 #client-employee-stats {
@@ -176,7 +177,7 @@ i {
   background-color: var(--tertiary-color);
   color: var(--primary-color);
   border-radius: 4px;
-  background-image: url("https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/arrow-down-b-24-512.png");
+  background-image: url('https://cdn2.iconfinder.com/data/icons/flat-ui-icons-24-px/24/arrow-down-b-24-512.png');
   background-repeat: no-repeat;
   background-position: right center;
   cursor: pointer;
