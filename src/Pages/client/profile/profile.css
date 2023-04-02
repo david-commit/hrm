@@ -1,46 +1,74 @@
 #client-profile {
-  width: 95vw;
+  width: 95%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
+  margin-left: 5%;
 }
 
-#client-profile > form,
-#client-profile > span,
-#client-profile > select {
-  width: 98%;
-  border: thin solid black;
+#client-profile-1 {
+  width: 95%;
+  height: 90%;
+  margin-left: 1%;
+  padding: 2rem;
 }
 
 .client-profile-head {
   height: max-content;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 1rem 0 0.5rem;
 }
 
-.client-profile-head > h3 {
-  font-size: 1.5rem;
-  color: var(--tertiary-color);
+#client-profile-1 > form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
 }
 
-.client-profile-head > p {
-  font-size: 0.8rem;
-  color: var(--four-color);
+#client-profile-1 > form > span {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: row;
 }
 
-#client-profile-1-1 {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
+#client-profile-1 > form > span > section {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+  margin-right: 2rem;
+  width: 100%;
+  max-width: 16rem;
 }
 
-#client-profile-1-1 > label {
-  height: 10vh;
-  margin-top: 0.5vh;
-  margin-bottom: 0.5vh;
-  width: max-content;
-  border: thin solid black;
+#client-profile-1 > form > span > section > input,
+#client-profile-1 > form > span > section > select {
+  margin-top: 0.8rem;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#client-profile-1 > form > button {
+  width: fit-content;
+  padding: 4px 8px;
+  margin-top: 1rem;
+  background-color: var(--tertiary-color);
+  color: white;
+  border: 1px solid var(--tertiary-color);
+  border-radius: 4px;
+}
+
+#salary-selection-div {
+  display: flex;
+  flex-direction: column;
+}
+
+#salary-selection-div > select {
+  margin-top: 0.8rem;
+  max-width: 16rem;
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
