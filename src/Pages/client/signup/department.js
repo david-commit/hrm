@@ -6,7 +6,7 @@ import "./dept.css";
 
 export default function DepartmentPay() {
   let { id } = useParams();
-  const [employeeId, setEmployeeId] = useState("");
+  // const [employeeId, setEmployeeId] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
 
@@ -21,8 +21,8 @@ export default function DepartmentPay() {
       },
       body: JSON.stringify({
         employee_id: 1,
-        start_date: "startdate",
-        end_date: "enddate",
+        start_date: startDate,
+        end_date: endDate,
       }),
     })
       .then((response) => {
@@ -39,6 +39,13 @@ export default function DepartmentPay() {
       });
   }
 
+  const handleEndDateChange = (event) => {
+    setEndDate(event.target.value);
+  };
+
+  const handleStartDateChange = (event) => {
+    setStartDate(event.target.value);
+  };
   return (
     <section id="client-cont">
       <ClientBar />
@@ -59,12 +66,20 @@ export default function DepartmentPay() {
               <span>
                 <label>
                   <p>Start date</p>
-                  <input type="date" />
+                  <input
+                    type="date"
+                    value={startDate}
+                    onChange={handleStartDateChange}
+                  />
                 </label>
 
                 <label>
                   <p>End date</p>
-                  <input type="date" />
+                  <input
+                    type="date"
+                    value={endDate}
+                    onChange={handleEndDateChange}
+                  />
                 </label>
               </span>
 
